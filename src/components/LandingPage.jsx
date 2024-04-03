@@ -8,9 +8,7 @@ import {
 } from "@mui/material";
 
 import { motion } from "framer-motion";
-// import { fadeIn } from "./variants";
 
-// Custom theme to incorporate the 'Fraunces' font
 const theme = createTheme({
   typography: {
     fontFamily: [
@@ -26,7 +24,7 @@ const theme = createTheme({
     h1: {
       fontFamily: "'Fraunces', serif",
       fontWeight: 900,
-      fontSize: "64px",
+      fontSize: "42px",
       textTransform: "uppercase",
       textAlign: "center",
       color: "black", // Fallback color
@@ -86,6 +84,7 @@ const LandingPage = () => {
                   "url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?&q=85)",
                 backgroundSize: "100vw auto",
                 backgroundPosition: "center",
+                paddingX: "4px",
               }}
               component={motion.div} // Use motion.div as the root component
               variants={variants} // Apply animation variants
@@ -117,7 +116,7 @@ const LandingPage = () => {
               top: "50%",
               width: "100%",
               transform: "translateY(-50%)",
-              color: "blue",
+              color: "black",
             },
           }}
         >
@@ -131,6 +130,7 @@ const LandingPage = () => {
                 backgroundColor: "white",
                 animation: "fadeInRight 1.5s ease-out forwards", // Adjust duration and easing to match your fadeIn function
                 animationDelay: "0.2s", // This is your delay before the animation starts
+                paddingX: "4px",
               }}
               component={motion.div} // Use motion.div as the root component
               variants={variants} // Apply animation variants

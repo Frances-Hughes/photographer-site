@@ -5,6 +5,8 @@ import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/ContactMe";
 import Gallery from "../components/Gallery";
 import PageNotFound from "../components/PageNotFound";
+import TermsConditions from "../components/TermsConditions";
+import IndividualPhoto from "../components/IndividualPhoto";
 
 const AllRoutes = () => {
   return (
@@ -13,7 +15,8 @@ const AllRoutes = () => {
       <Route path="/aboutme" element={<AboutMe />} />
       <Route path="gallery" element={<Gallery />} />
       <Route path="/contactme" element={<ContactMe />} />
-      {/* <Route path="gallery/:id" element={<IndividualPhoto />} /> */}
+      <Route path="/termsandconditions" element={<TermsConditions />} />
+      <Route path="gallery/:id" element={<IndividualPhoto />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

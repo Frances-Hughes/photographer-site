@@ -15,6 +15,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 const pages = [
   { title: "About Me", path: "/aboutme" },
   { title: "Gallery", path: "/gallery" },
+  { title: "Terms & Conditions", path: "/termsandconditions" },
   { title: "Contact Me", path: "/contactme" },
 ];
 
@@ -41,7 +42,7 @@ function NavBar() {
             to="/"
             sx={{
               mr: 2,
-              display: { xs: "none", md: "flex" },
+              display: { xs: "absolute", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
