@@ -1,6 +1,5 @@
-// Gallery.js
 import React from "react";
-import { Grid, Paper, Container } from "@mui/material";
+import { Grid, Paper, Container, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 
@@ -14,6 +13,7 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
   boxShadow: "none",
   "& img": {
     maxWidth: "100%",
+    filter: "grayscale(100%)", // Make images black and white
   },
   "& .border": {
     position: "absolute",
@@ -210,6 +210,12 @@ const images = [
 const Gallery = () => {
   return (
     <Container>
+      <Typography
+        variant="h2"
+        sx={{ display: "flex", justifyContent: "center", my: "22px" }}
+      >
+        Gallery
+      </Typography>
       <Grid container spacing={2} justifyContent="center">
         {images.map((image) => (
           <Grid item key={image.id}>

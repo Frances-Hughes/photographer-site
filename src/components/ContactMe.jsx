@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Box, Button, Container, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import emailjs from "@emailjs/browser";
 import { TypeAnimation } from "react-type-animation";
 
 const AnimatedBox = styled(Box)(({ theme }) => ({
@@ -30,7 +29,7 @@ const ContactMe = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "primary.dark" }}>
+    <Box sx={{ bgcolor: "primary.light" }}>
       <Container
         sx={{
           display: "flex",
@@ -43,7 +42,12 @@ const ContactMe = () => {
         <Box sx={{ width: "100%", maxWidth: 700 }}>
           <Typography
             variant="h5"
-            sx={{ mb: 12, color: "white" }}
+            sx={{
+              mb: 12,
+              color: "black",
+              fontFamily: "'Fraunces', serif",
+              fontWeight: "bold",
+            }}
             className="fade-in"
           >
             <TypeAnimation
@@ -55,7 +59,11 @@ const ContactMe = () => {
               ]}
               wrapper="span"
               speed={50}
-              style={{ fontSize: "2em", display: "inline-block" }}
+              style={{
+                fontSize: "2em",
+                display: "inline-block",
+                fontFamily: "'Fraunces', serif",
+              }}
             />
           </Typography>
 
@@ -102,11 +110,7 @@ const ContactMe = () => {
               error={!!validationMessages.message}
               helperText={validationMessages.message}
             />
-            <Button
-              variant="contained"
-              //   endIcon={< />}
-              type="submit"
-            >
+            <Button variant="contained" type="submit">
               Send
             </Button>
           </Box>

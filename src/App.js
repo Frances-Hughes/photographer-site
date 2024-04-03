@@ -10,9 +10,20 @@ const theme = createTheme({
     mode: "light",
     primary: {
       main: grey[50],
+      light: grey[500],
+      dark: grey[900],
     },
   },
 });
+
+// const theme2 = createTheme({
+//   palette: {
+//     mode: "light",
+//     primary: {
+//       main: grey[50],
+//     },
+//   },
+// });
 
 function App() {
   return (
