@@ -1,7 +1,9 @@
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import NavBar from "./components/NavBar";
-import LandingPage from "./components/LandingPage";
+import AllRoutes from "./routes/AllRoutes";
 
 const theme = createTheme({
   palette: {
@@ -14,12 +16,12 @@ const theme = createTheme({
 
 function App() {
   return (
-    <>
+    <Router>
       <ThemeProvider theme={theme}>
         <NavBar />
-        <LandingPage />
+        <AllRoutes />
       </ThemeProvider>
-    </>
+    </Router>
   );
 }
 

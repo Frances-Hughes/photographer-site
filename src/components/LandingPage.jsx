@@ -52,7 +52,7 @@ const LandingPage = () => {
       <CssBaseline />
       <Box
         sx={{
-          height: "200vh",
+          height: "120vh",
           position: "relative",
           overflow: "hidden",
         }}
@@ -64,12 +64,12 @@ const LandingPage = () => {
             overflow: "hidden",
             position: "absolute",
             top: 0,
-            height: "100vh",
+            height: "60vh",
             left: 0,
             width: "100%",
             bgcolor: "white",
             WebkitMaskImage:
-              "-webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%)",
+              "-webkit-linear-gradient(top, #fffff 0%, #ffffff 100%)",
             "& .title_wrapper": {
               position: "fixed",
               top: "50%",
@@ -103,8 +103,8 @@ const LandingPage = () => {
             clip: "rect(0, auto, auto, 0)",
             overflow: "hidden",
             position: "absolute",
-            top: "100vh",
-            height: "100vh",
+            top: "60vh",
+            height: "60vh",
             left: 0,
             width: "100%",
             backgroundImage:
@@ -117,7 +117,7 @@ const LandingPage = () => {
               top: "50%",
               width: "100%",
               transform: "translateY(-50%)",
-              color: "white",
+              color: "blue",
             },
           }}
         >
@@ -145,7 +145,7 @@ const LandingPage = () => {
 
       <Box
         sx={{
-          minHeight: "100vh",
+          minHeight: "60vh",
           padding: "2em",
           margin: "auto",
           maxWidth: "800px",
