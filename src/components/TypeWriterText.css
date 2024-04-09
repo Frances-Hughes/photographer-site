@@ -1,0 +1,76 @@
+.typewriter p {
+  font-weight: 400;
+  overflow: hidden;
+  color: white;
+}
+
+.responsive-font {
+  font-size: 1rem; /* Default font size for extra small and small screens */
+  color: white;
+}
+
+.typewriter p:nth-child(1) {
+  width: 100%;
+  animation: type 3s;
+}
+
+.typewriter p:nth-child(2) {
+  width: 100%;
+  opacity: 0;
+  animation: type2 2.7s;
+  animation-delay: 2.8s;
+  animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(3) {
+  width: 100%;
+  opacity: 0;
+  animation: type2 2.7s;
+  animation-delay: 5.3s;
+  animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(4) {
+  width: 100%;
+  opacity: 0;
+  animation: type2 2.7s linear;
+  animation-delay: 7.7s;
+  animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(5) {
+  width: 100%;
+  opacity: 0;
+  animation: type2 2.7s linear;
+  animation-delay: 10.3s;
+  animation-fill-mode: forwards;
+}
+
+/* animation keyframes below */
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    /* No specific styles here */
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-font {
+    font-size: 1.1rem; /* Font size for medium and larger screens */
+  }
+}

@@ -11,15 +11,17 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import { useTheme } from "@mui/material/styles";
 
 const pages = [
   { title: "About Me", path: "/aboutme" },
   { title: "Gallery", path: "/gallery" },
-  { title: "Terms & Conditions", path: "/termsandconditions" },
+  { title: "Testimonials", path: "/testimonials" },
   { title: "Contact Me", path: "/contactme" },
 ];
 
 function NavBar() {
+  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -31,7 +33,14 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="sticky">
+    <AppBar
+      position="sticky"
+      sx={{
+        bgcolor: "transparent",
+        backdropFilter: "blur(15px)",
+        WebkitBackdropFilter: "blur(5px)",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -102,7 +111,7 @@ function NavBar() {
                 component={Link}
                 to={page.path}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "black", display: "block" }}
+                sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page.title}
               </Button>
