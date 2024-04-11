@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import TestReel from "./TestReel";
-import AyaImg from "../aya2.png";
+import AyaImg from "../Photos/AboutMeImg.png";
 import EventImg from "../a1.jpg";
 import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -28,6 +28,9 @@ const theme = createTheme({
         },
       },
     },
+  },
+  typography: {
+    fontFamily: '"Yuji Syuku", "Helvetica", "Arial", sans-serif',
   },
 });
 
@@ -131,10 +134,26 @@ const AboutMe = () => {
               About Me
             </Typography>
             <Typography variant="body1" sx={{ my: 12 }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              soluta odit tempora distinctio! Unde quod non mollitia beatae
-              culpa sunt fuga molestias, est perferendis minus, maxime tenetur
-              optio facilis facere?
+              Growing up surrounded by awe-inspiring mountains juxtaposed
+              against vast open fields, nurtured my creativity from a young age.
+              This environment allowed my artistic instincts to flourish and
+              unleashed my passion for visual storytelling. My fascination with
+              evoking emotions through art led me to photography, a medium that
+              felt like pure magic from the moment I held a camera. I prefer
+              showcasing my vibrant, serene, and dynamic life visually rather
+              than explaining it verbally. The pursuit of impactful moments
+              fueled my curiosity to explore beyond boundaries, leading me to
+              delve into various creative endeavors like filmmaking, film
+              photography, design, podcasting, music, and the quest for the
+              perfect pancake. Through challenging conditions and sleepless
+              nights, I've honed my skills, adapting to difficult situations
+              while chasing captivating images. Despite the hardships, I've also
+              learned to appreciate moments of relaxation, like sipping a
+              Margarita by the pool. Life's endless intrigue continually
+              inspires me, and I'm always ready to capture new adventures and
+              freeze timeless memories. The journey is far from over, and I
+              invite you to join me as we explore the beauty of life through my
+              lens.
             </Typography>
             <Typography variant="body1" sx={{ my: 12 }}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias

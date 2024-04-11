@@ -7,6 +7,8 @@ import {
   createTheme,
 } from "@mui/material";
 
+import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
+
 // import AB from "../../public/AB.png";
 
 import { motion } from "framer-motion";
@@ -14,7 +16,7 @@ import { motion } from "framer-motion";
 const theme = createTheme({
   typography: {
     fontFamily: [
-      "-apple-system",
+      "Yuji Syuku",
       "BlinkMacSystemFont",
       '"Segoe UI"',
       "Helvetica",
@@ -28,7 +30,7 @@ const theme = createTheme({
       fontSize: "42px",
       textTransform: "uppercase",
       textAlign: "center",
-      color: "black", // Fallback color
+      color: "white", // Fallback color
       textFillColor: "transparent",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
@@ -76,11 +78,12 @@ const LandingPage = () => {
             <Typography
               variant="h1"
               sx={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?&q=85)",
+                backgroundImage: `url(${LandingImg})`,
+                filter: "grayscale(100%)",
                 backgroundSize: "100vw auto",
                 backgroundPosition: "center",
                 paddingX: "4px",
+                fontWeight: "bold",
               }}
               component={motion.div} // Use motion.div as the root component
               variants={variants} // Apply animation variants
@@ -102,9 +105,7 @@ const LandingPage = () => {
             height: "60vh",
             left: 0,
             width: "100%",
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1575058752200-a9d6c0f41945?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ)",
-            // "./AB.png",
+            backgroundImage: `url(${LandingImg})`,
             backgroundSize: "100vw auto",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
@@ -113,7 +114,7 @@ const LandingPage = () => {
               top: "50%",
               width: "100%",
               transform: "translateY(-50%)",
-              color: "black",
+              color: "white",
             },
           }}
         >
@@ -142,26 +143,37 @@ const LandingPage = () => {
 
       <Box
         sx={{
-          minHeight: "60vh",
+          minHeight: "70vh",
           padding: "2em",
           margin: "auto",
           maxWidth: "800px",
-          "& h2": { fontFamily: "'Arial', serif" },
+          "& h2": { fontFamily: "'Yuji Syuku'" },
           "& p": {
             fontFamily:
               '-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
           },
         }}
       >
-        <Typography variant="h2">Lorem ipsum dolor sit amet.</Typography>
-        <Typography paragraph>
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, q
+        <Typography variant="h2">一期一会</Typography>
+        <Typography variant="h4" sx={{ my: 2 }}>
+          [/ichigo-ichie/] a Japanese idiom
         </Typography>
-        <Typography paragraph>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto
+        <Typography
+          variant="h5"
+          sx={{ my: 2, display: "flex", justifyContent: "center" }}
+        >
+          a cultural concept of treasuring the unrepeatable nature of a moment
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            my: 2,
+            display: "flex",
+            justifyContent: "center",
+            color: "gray",
+          }}
+        >
+          "Capturing moments as a return ticket to a moment otherwise gone"
         </Typography>
       </Box>
     </ThemeProvider>
