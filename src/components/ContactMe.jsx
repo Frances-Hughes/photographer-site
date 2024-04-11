@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Box, Container, TextField, Typography } from "@mui/material";
 import { TypeAnimation } from "react-type-animation";
-import "../App.css"; // Assuming your custom CSS for the button is correctly defined here
+import emailjs from "@emailjs/browser";
+import "../App.css"; // Ensure your CSS is correctly defined here
 
 const ContactMe = () => {
   const form = useRef();
@@ -14,7 +15,69 @@ const ContactMe = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    // Placeholder for email sending logic
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let isValid = true;
+    let newValidationMessages = {
+      userName: "",
+      userEmail: "",
+      subject: "",
+      message: "",
+    };
+
+    const formData = new FormData(form.current);
+    const userName = formData.get("user_name"); // Ensure these match your EmailJS template parameters
+    const userEmail = formData.get("user_email"); // Ensure these match your EmailJS template parameters
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    if (!userName) {
+      newValidationMessages.userName = "*Required field";
+      isValid = false;
+    }
+    if (!userEmail) {
+      newValidationMessages.userEmail = "*Required field";
+      isValid = false;
+    } else if (!emailRegex.test(userEmail)) {
+      newValidationMessages.userEmail = "*Please enter a valid email address";
+      isValid = false;
+    }
+    if (!subject) {
+      newValidationMessages.subject = "*Required field";
+      isValid = false;
+    }
+    if (!message) {
+      newValidationMessages.message = "*Required field";
+      isValid = false;
+    }
+
+    setValidationMessages(newValidationMessages);
+
+    if (!isValid) return;
+
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.REACT_APP_EMAILJS_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Your email has been sent!");
+          form.current.reset();
+          setValidationMessages({
+            userName: "",
+            userEmail: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -30,13 +93,7 @@ const ContactMe = () => {
         }}
       >
         <Box sx={{ width: "100%", maxWidth: 700 }}>
-          <Typography
-            variant="h5"
-            sx={{
-              mb: 12,
-              fontWeight: "bold",
-            }}
-          >
+          <Typography variant="h5" sx={{ mb: 12, fontWeight: "bold" }}>
             <TypeAnimation
               sequence={[
                 "Need a photographer?",
@@ -60,7 +117,7 @@ const ContactMe = () => {
             <Box sx={{ display: "flex", gap: 2 }}>
               <TextField
                 fullWidth
-                name="userName"
+                name="user_name" // Adjusted to match EmailJS template variables
                 label="Your Name"
                 variant="outlined"
                 error={!!validationMessages.userName}
@@ -81,7 +138,7 @@ const ContactMe = () => {
               />
               <TextField
                 fullWidth
-                name="userEmail"
+                name="user_email" // Adjusted to match EmailJS template variables
                 label="Your Email"
                 variant="outlined"
                 error={!!validationMessages.userEmail}
@@ -89,6 +146,7 @@ const ContactMe = () => {
                 InputLabelProps={{ style: { color: "white" } }}
                 InputProps={{
                   style: { color: "white" },
+                  notchedOutline: { borderColor: "white" },
                 }}
                 sx={{
                   "& label.Mui-focused": { color: "white" },
@@ -110,6 +168,7 @@ const ContactMe = () => {
               InputLabelProps={{ style: { color: "white" } }}
               InputProps={{
                 style: { color: "white" },
+                notchedOutline: { borderColor: "white" },
               }}
               sx={{
                 "& label.Mui-focused": { color: "white" },
@@ -132,6 +191,7 @@ const ContactMe = () => {
               InputLabelProps={{ style: { color: "white" } }}
               InputProps={{
                 style: { color: "white" },
+                notchedOutline: { borderColor: "white" },
               }}
               sx={{
                 "& label.Mui-focused": { color: "white" },
@@ -142,20 +202,20 @@ const ContactMe = () => {
                 },
               }}
             />
-            {/* Custom SEND button */}
             <Box
-              component="a"
-              href="#"
+              component="button"
+              type="submit"
               className="button type--C"
-              onClick={sendEmail} // Replace this with your actual send email logic
               sx={{
                 display: "flex",
                 justifyContent: "center",
                 mt: 2,
                 textDecoration: "none",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
               }}
             >
-              {/* The content of your button */}
               <div className="button__line"></div>
               <div className="button__line"></div>
               <span className="button__text">SEND</span>
