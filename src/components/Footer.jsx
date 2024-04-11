@@ -2,7 +2,9 @@ import React from "react";
 import { Box, Container, Link, Grid, Tooltip } from "@mui/material";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import ArtTrackIcon from "@mui/icons-material/ArtTrack";
 
 const FooterContainer = (theme) => ({
   position: "fixed",
@@ -26,10 +28,10 @@ const Footer = () => {
           spacing={2}
           sx={{ justifyContent: "center", textAlign: "center" }}
         >
-          <Grid item xs={6}>
+          <Grid item xs={3}>
             <Tooltip title="Visit my LinkedIn page" placement="top">
               <Link
-                href="https://www.linkedin.com/in/frances-l-hughes/"
+                href="https://www.linkedin.com/in/ayano-masuda/"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit" // Changed from "black" to use the theme's contrast text color
@@ -45,8 +47,46 @@ const Footer = () => {
               </Link>
             </Tooltip>
           </Grid>
-          <Grid item xs={6}>
-            <Tooltip title="Link to this repository" placement="top">
+          <Grid item xs={3}>
+            <Tooltip title="Visit my Instagram" placement="top">
+              <Link
+                href="https://www.instagram.com/ayanophotography.jp/"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit" // Changed from "black" to use the theme's contrast text color
+                underline="hover"
+              >
+                <InstagramIcon
+                  sx={{
+                    "&:hover": {
+                      transform: "scale(1.2)",
+                    },
+                  }}
+                />
+              </Link>
+            </Tooltip>
+          </Grid>
+          <Grid item xs={3}>
+            <Tooltip title="Visit my Facebook page" placement="top">
+              <Link
+                href="https://www.facebook.com/ayanophotography.nz"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="inherit" // Changed from "black" to use the theme's contrast text color
+                underline="hover"
+              >
+                <FacebookIcon
+                  sx={{
+                    "&&:hover": {
+                      transform: "scale(1.2)",
+                    },
+                  }}
+                />
+              </Link>
+            </Tooltip>
+          </Grid>
+          <Grid item xs={3}>
+            <Tooltip title="Terms and Conditions" placement="top">
               <Link
                 href="/termsandconditions"
                 target="_blank"
@@ -54,9 +94,9 @@ const Footer = () => {
                 color="inherit" // Changed from "black" to use the theme's contrast text color
                 underline="hover"
               >
-                <GitHubIcon
+                <ArtTrackIcon
                   sx={{
-                    "&:hover": {
+                    "&&:hover": {
                       transform: "scale(1.2)",
                     },
                   }}

@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
-    mode: "dark", // Use dark mode
+    mode: "dark",
     primary: {
       main: "#111315",
       light: "#363B40",
@@ -19,16 +19,25 @@ const theme = createTheme({
       paper: "#363B40",
     },
     text: {
-      primary: "#ffffff", // White text for primary text
-      secondary: grey[500], // A lighter shade for secondary text, adjust as needed
-      disabled: grey[600], // For disabled text, adjust as needed
+      primary: "#ffffff",
+      secondary: grey[500],
+      disabled: grey[600],
     },
   },
   typography: {
-    fontFamily: 'Poppins, "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Yuji Syuku", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontWeight: 600,
-      fontSize: "6rem",
+      fontWeight: 900, // Use the heaviest weight supported by "Yuji Syuku", or 900 as a fallback
+      fontSize: "42px",
+      textTransform: "uppercase",
+      textAlign: "center",
+      color: "white", // Fallback color
+      textFillColor: "transparent",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
+      WebkitBackgroundClip: "text",
+      textShadow: "2px 2px 0px rgba(0,0,0,0.2)", // Faux bold effect
+      letterSpacing: "2px", // Makes text wider
     },
     h2: {
       fontWeight: 600,

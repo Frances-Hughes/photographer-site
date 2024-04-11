@@ -1,33 +1,32 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Box } from "@mui/material";
 
+// Local image imports
+import Reel1 from "../Photos/Reel/Reel1.png";
+import Reel2 from "../Photos/Reel/Reel2.jpg";
+import Reel3 from "../Photos/Reel/Reel3.png";
+import Reel4 from "../Photos/Reel/Reel4.jpeg";
+import Reel5 from "../Photos/Reel/Reel5.jpg";
+import Reel6 from "../Photos/Reel/Reel6.jpg";
+import Reel7 from "../Photos/Reel/Reel7.jpg";
+import Reel8 from "../Photos/Reel/Reel8.jpg";
+import Reel9 from "../Photos/Reel/Reel9.jpg";
+import Reel10 from "../Photos/Reel/Reel10.jpg";
+// import Reel11 from "../Photos/Reel/Reel11.jpg";
+
+// Updated array with local images
 const baseImages = [
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-  "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-
-  // Other image URLs...
+  Reel2,
+  Reel3,
+  Reel4,
+  Reel5,
+  Reel6,
+  Reel7,
+  Reel1,
+  Reel8,
+  Reel9,
+  Reel10,
 ];
-
 const images = [...baseImages, ...baseImages];
 
 export default function TestReel() {
@@ -72,7 +71,7 @@ export default function TestReel() {
         willChange: "transform",
         perspective: "1000px",
         my: 18,
-        backgroundColor: "black", // Background color set to red
+        backgroundColor: "black",
         padding: "20px",
       }}
       style={{
@@ -83,10 +82,10 @@ export default function TestReel() {
         <Box sx={{ px: "3px" }} key={index}>
           <Box
             component="img"
-            src={src}
+            src={src} // This now uses local image paths
             sx={{
               height: "250px",
-              margin: "0 10px", // Adjust margins as needed, replaced px with margin for clarity
+              margin: "0 10px",
               flexShrink: 0,
             }}
             alt={`Image ${index}`}
