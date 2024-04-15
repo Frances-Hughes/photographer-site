@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import TestReel from "./TestReel";
 import AyaImg from "../Photos/AboutMeImg.png";
-import EventImg from "../a1.jpg";
+import EventImg from "../Photos/Gallery33.jpg";
 import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 

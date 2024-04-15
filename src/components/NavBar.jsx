@@ -16,7 +16,7 @@ import { useTheme } from "@mui/material/styles";
 const pages = [
   { title: "About Me", path: "/aboutme" },
   { title: "Gallery", path: "/gallery" },
-  { title: "Testimonials", path: "/testimonials" },
+  { title: "Pricing", path: "/pricing" },
   { title: "Contact Me", path: "/contactme" },
 ];
 

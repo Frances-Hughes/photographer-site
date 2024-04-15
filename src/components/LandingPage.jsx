@@ -2,7 +2,7 @@ import React from "react";
 import {
   Box,
   Typography,
-  CssBaseline,
+  // CssBaseline,
   ThemeProvider,
   createTheme,
 } from "@mui/material";
@@ -173,7 +173,8 @@ const LandingPage = () => {
             color: "gray",
           }}
         >
-          "Capturing moments as a return ticket to a moment otherwise gone"
+          "Every encounter is a unique and precious moment that will never be
+          repeated again."
         </Typography>
       </Box>
     </ThemeProvider>
