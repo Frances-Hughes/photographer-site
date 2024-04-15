@@ -5,6 +5,7 @@ import { grey } from "@mui/material/colors";
 import NavBar from "./components/NavBar";
 import AllRoutes from "./routes/AllRoutes";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const theme = createTheme({
   palette: {
@@ -60,6 +61,7 @@ const theme = createTheme({
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <NavBar />

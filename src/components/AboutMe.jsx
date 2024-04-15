@@ -7,6 +7,7 @@ import {
   CardMedia,
   Container,
   styled,
+  Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import TestReel from "./TestReel";
@@ -14,6 +15,7 @@ import AyaImg from "../Photos/AboutMeImg.png";
 import EventImg from "../Photos/Gallery33.jpg";
 import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { TypeAnimation } from "react-type-animation";
 
 const theme = createTheme({
   components: {
@@ -129,7 +131,74 @@ const AboutMe = () => {
         </Container>
         <TestReel />
         <Container>
-          <Box sx={{ my: "36px", p: "20px" }}>
+          <Box sx={{ my: "36px", padding: "20px" }}>
+            <Typography
+              variant="h5"
+              sx={{ my: 3, fontWeight: "bold", textAlign: "center" }}
+            >
+              <TypeAnimation
+                sequence={["What people say about me:", 1000]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: "2em", display: "inline-block" }}
+              />
+            </Typography>
+            <Box sx={{ flexGrow: 1 }}>
+              <Grid
+                container
+                spacing={2}
+                sx={{
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.5s ease",
+                  "&:hover": {
+                    filter: "none",
+                  },
+                }}
+              >
+                <Grid item xs={12} sm={6} md={3}>
+                  <Typography
+                    variant="body1"
+                    sx={{ textAlign: "center", mt: 2 }}
+                  >
+                    "Ayano took some stunning photos of my fiancé and I for our
+                    engagement photoshoot. We are so pleased with her work and
+                    will treasure these pictures for years to come. I cannot
+                    recommend her enough!"
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                  <Typography
+                    variant="body1"
+                    sx={{ textAlign: "center", mt: 2 }}
+                  >
+                    "All the fun, love and laughters very well captured by the
+                    talented @ayanophotography.jp"
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                  <Typography
+                    variant="body1"
+                    sx={{ textAlign: "center", mt: 2 }}
+                  >
+                    "It was the best night. I highly recommend a 'photography
+                    gift' to capture the moment with @ayanophotography.jp"
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sm={6} md={3}>
+                  <Typography
+                    variant="body1"
+                    sx={{ textAlign: "center", mt: 2 }}
+                  >
+                    "Aya did photography for our event at Storyo and she did
+                    such a freaking awesome job! Was so thorough with her
+                    communication and ideas and took SO MANY AMAZING PHOTOS of
+                    the event - my heart is full and I would 100% recommend Aya"
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+            {/*  */}
+
             <Typography variant="h2" sx={{ textAlign: "center", my: 12 }}>
               About Me
             </Typography>
