@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme } from "@mui/material/styles";
 import LogoNav from "../Photos/LogoNav2.png";
 
 const pages = [
@@ -21,7 +20,6 @@ const pages = [
 ];
 
 function NavBar() {
-  const theme = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
