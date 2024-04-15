@@ -41,8 +41,8 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
   position: "relative",
   margin: "7px",
   padding: "6px",
-  width: "556px", // Set width to 556px
-  height: "378px", // Set height to 378px
+  width: "556px",
+  height: "378px",
   backgroundColor: "transparent",
   boxShadow: "none",
   "& img": {
@@ -152,7 +152,7 @@ const images = [
 
 const Gallery = () => {
   return (
-    <Container>
+    <Container sx={{ my: 12 }}>
       <Typography
         variant="h2"
         sx={{ display: "flex", justifyContent: "center", my: "22px" }}
