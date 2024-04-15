@@ -202,33 +202,32 @@ const AboutMe = () => {
             <Typography variant="h2" sx={{ textAlign: "center", my: 12 }}>
               About Me
             </Typography>
-            <Typography variant="body1" sx={{ my: 12 }}>
-              Growing up surrounded by awe-inspiring mountains juxtaposed
-              against vast open fields, nurtured my creativity from a young age.
-              This environment allowed my artistic instincts to flourish and
-              unleashed my passion for visual storytelling. My fascination with
-              evoking emotions through art led me to photography, a medium that
-              felt like pure magic from the moment I held a camera. I prefer
-              showcasing my vibrant, serene, and dynamic life visually rather
-              than explaining it verbally. The pursuit of impactful moments
-              fueled my curiosity to explore beyond boundaries, leading me to
-              delve into various creative endeavors like filmmaking, film
-              photography, design, podcasting, music, and the quest for the
-              perfect pancake. Through challenging conditions and sleepless
-              nights, I've honed my skills, adapting to difficult situations
-              while chasing captivating images. Despite the hardships, I've also
-              learned to appreciate moments of relaxation, like sipping a
-              Margarita by the pool. Life's endless intrigue continually
-              inspires me, and I'm always ready to capture new adventures and
-              freeze timeless memories. The journey is far from over, and I
-              invite you to join me as we explore the beauty of life through my
-              lens.
+            <Typography variant="body1" sx={{ my: 2 }}>
+              Growing up in Osaka, Japan, surrounded by the harmonious blend of
+              urban landscapes and the serenity of nature, nurtured my
+              creativity from a young age. The contrast between the bustling
+              cityscape and tranquil parks cultivated my artistic instincts,
+              unleashing my passion for visual storytelling. My fascination with
+              evoking emotions through art led me to photography—a medium that
+              felt like pure magic from the moment I first held a camera. I
+              prefer to showcase my vibrant, serene, and dynamic life visually
+              rather than explain it verbally.
             </Typography>
-            <Typography variant="body1" sx={{ my: 12 }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-              soluta odit tempora distinctio! Unde quod non mollitia beatae
-              culpa sunt fuga molestias, est perferendis minus, maxime tenetur
-              optio facilis facere?
+            <Typography variant="body1" sx={{ my: 2 }}>
+              Inspired by the Japanese saying "ichigo ichie," which means "one
+              time, one meeting," I embrace each moment as a unique opportunity,
+              fueling my curiosity to explore beyond the familiar. This pursuit
+              has led me to delve into various creative endeavors like
+              filmmaking, film photography, design, podcasting, music, and the
+              quest for the perfect pancake. Through challenging conditions and
+              sleepless nights, I've honed my skills, adapting to difficult
+              situations while chasing captivating images. Despite the
+              hardships, I've also learned to appreciate moments of relaxation,
+              like sipping a Margarita by the pool. Life's endless intrigue
+              continually inspires me, and as we embrace each fleeting moment
+              together, I invite you to join me in exploring the beauty of life
+              through my lens. The journey is far from over, and each encounter
+              promises a new adventure and a memory to be treasured forever.
             </Typography>
             <CardMedia
               component="img"

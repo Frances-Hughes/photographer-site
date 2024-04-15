@@ -93,7 +93,15 @@ const ContactMe = () => {
         }}
       >
         <Box sx={{ width: "100%", maxWidth: 700 }}>
-          <Typography variant="h5" sx={{ mb: 12, fontWeight: "bold" }}>
+          <Typography
+            variant="h5"
+            sx={{
+              mb: 12,
+              fontWeight: "bold",
+              height: "125px",
+              overflow: "hidden",
+            }}
+          >
             <TypeAnimation
               sequence={[
                 "Need a photographer?",
