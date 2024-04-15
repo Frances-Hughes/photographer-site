@@ -1,9 +1,10 @@
 import React from "react";
-import { Grid, Paper, Container, Typography } from "@mui/material";
+import { Grid, Paper, Box, Typography, Skeleton } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+// Importing images
 import Gallery1 from "../Photos/Gallery1.jpg";
 import Gallery2 from "../Photos/Gallery2.jpg";
 import Gallery3 from "../Photos/Gallery3.JPG";
@@ -37,18 +38,50 @@ import Gallery30 from "../Photos/Gallery30.jpg";
 import Gallery31 from "../Photos/Gallery31.jpg";
 import Gallery32 from "../Photos/Gallery32.jpg";
 
+const images = [
+  { id: 1, src: Gallery1 },
+  { id: 2, src: Gallery2 },
+  { id: 3, src: Gallery3 },
+  { id: 4, src: Gallery4 },
+  { id: 5, src: Gallery5 },
+  { id: 6, src: Gallery6 },
+  { id: 7, src: Gallery7 },
+  { id: 8, src: Gallery8 },
+  { id: 9, src: Gallery9 },
+  { id: 10, src: Gallery10 },
+  { id: 11, src: Gallery11 },
+  { id: 12, src: Gallery12 },
+  { id: 13, src: Gallery13 },
+  { id: 14, src: Gallery14 },
+  { id: 15, src: Gallery15 },
+  { id: 16, src: Gallery16 },
+  { id: 17, src: Gallery17 },
+  { id: 18, src: Gallery18 },
+  { id: 19, src: Gallery19 },
+  { id: 20, src: Gallery20 },
+  { id: 21, src: Gallery21 },
+  { id: 22, src: Gallery22 },
+  { id: 23, src: Gallery23 },
+  { id: 24, src: Gallery24 },
+  { id: 25, src: Gallery25 },
+  { id: 26, src: Gallery26 },
+  { id: 27, src: Gallery27 },
+  { id: 28, src: Gallery28 },
+  { id: 29, src: Gallery29 },
+  { id: 30, src: Gallery30 },
+  { id: 31, src: Gallery31 },
+  { id: 32, src: Gallery32 },
+];
+
 const ImagePaper = styled(Paper)(({ theme }) => ({
   position: "relative",
   margin: "7px",
   padding: "6px",
-  width: "556px",
-  height: "378px",
   backgroundColor: "transparent",
   boxShadow: "none",
   "& img": {
     width: "100%",
-
-    objectFit: "cover", // Ensure images cover the area without distortion
+    objectFit: "cover",
     filter: "grayscale(100%)",
     transition: "filter 0.3s ease",
   },
@@ -115,58 +148,28 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
     height: "100%",
   },
 }));
-const images = [
-  { id: 1, src: Gallery1 },
-  { id: 2, src: Gallery2 },
-  { id: 3, src: Gallery3 },
-  { id: 4, src: Gallery4 },
-  { id: 5, src: Gallery5 },
-  { id: 6, src: Gallery6 },
-  { id: 7, src: Gallery7 },
-  { id: 8, src: Gallery8 },
-  { id: 9, src: Gallery9 },
-  { id: 10, src: Gallery10 },
-  { id: 11, src: Gallery11 },
-  { id: 12, src: Gallery12 },
-  { id: 13, src: Gallery13 },
-  { id: 14, src: Gallery14 },
-  { id: 15, src: Gallery15 },
-  { id: 16, src: Gallery16 },
-  { id: 17, src: Gallery17 },
-  { id: 18, src: Gallery18 },
-  { id: 19, src: Gallery19 },
-  { id: 20, src: Gallery20 },
-  { id: 21, src: Gallery21 },
-  { id: 22, src: Gallery22 },
-  { id: 23, src: Gallery23 },
-  { id: 24, src: Gallery24 },
-  { id: 25, src: Gallery25 },
-  { id: 26, src: Gallery26 },
-  { id: 27, src: Gallery27 },
-  { id: 28, src: Gallery28 },
-  { id: 29, src: Gallery29 },
-  { id: 30, src: Gallery30 },
-  { id: 31, src: Gallery31 },
-  { id: 32, src: Gallery32 },
-];
 
 const Gallery = () => {
   return (
-    <Container sx={{ my: 12 }}>
+    <Box sx={{ px: "5%", my: 12 }}>
       <Typography
         variant="h2"
         sx={{ display: "flex", justifyContent: "center", my: "22px" }}
       >
         Gallery
       </Typography>
-      <Grid container spacing={2} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center">
         {images.map((image) => (
           <Grid item key={image.id} xs={12} sm={12} lg={6}>
             <ImagePaper>
               <LazyLoadImage
                 src={image.src}
-                alt={`GalleryImage ${image.id}`}
+                alt={`Gallery Image ${image.id}`}
                 effect="blur"
+                placeholder={
+                  <Skeleton variant="rectangular" width="100%" height={200} />
+                }
+                wrapperClassName="image-wrapper"
               />
               <div className="border one">
                 <div></div>
@@ -178,7 +181,7 @@ const Gallery = () => {
           </Grid>
         ))}
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

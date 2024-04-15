@@ -10,8 +10,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
+import LogoNav from "../Photos/LogoNav2.png";
 
 const pages = [
   { title: "About Me", path: "/aboutme" },
@@ -43,25 +43,9 @@ function NavBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component={Link}
-            to="/"
-            sx={{
-              mr: 2,
-              display: { xs: "absolute", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            LOGO
-          </Typography>
-
+          <Link to="/" style={{ display: "flex", alignItems: "center" }}>
+            <img src={LogoNav} alt="logo" height={70} />
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

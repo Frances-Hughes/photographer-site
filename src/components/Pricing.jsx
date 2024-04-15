@@ -35,8 +35,8 @@ const Pricing = () => {
           Events to Cultural and Community Events, couples & family.
         </Typography>
         <Typography variant="body1" sx={{ textAlign: "center", my: 2 }}>
-          All packages include a set of digital images. Print product and
-          stunning Queensberry albums are available to order in addition.
+          All packages include a set of digital images. Printed products and
+          stunning ly high quality albums are available to order in addition.
         </Typography>
         <Box sx={{ flexGrow: 1 }}>
           <Grid
