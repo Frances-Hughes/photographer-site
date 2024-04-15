@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid, Paper, Container, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -175,10 +174,6 @@ const Gallery = () => {
               <div className="border two">
                 <div></div>
               </div>
-              <Link
-                to={`/gallery/${image.id}`}
-                style={{ display: "none" }}
-              ></Link>
             </ImagePaper>
           </Grid>
         ))}
