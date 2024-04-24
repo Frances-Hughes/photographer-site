@@ -16,7 +16,7 @@ import Gallery8 from "../Photos/Gallery8.jpg";
 import Gallery9 from "../Photos/Gallery9.png";
 import Gallery10 from "../Photos/Gallery10.jpg";
 import Gallery11 from "../Photos/Gallery11.jpg";
-import Gallery12 from "../Photos/Gallery12.png";
+import Gallery12 from "../Photos/Gallery12.jpg";
 import Gallery13 from "../Photos/Gallery13.jpg";
 import Gallery14 from "../Photos/Gallery14.jpg";
 import Gallery15 from "../Photos/Gallery15.jpg";
@@ -34,9 +34,9 @@ import Gallery26 from "../Photos/Gallery26.jpg";
 import Gallery27 from "../Photos/Gallery27.jpg";
 import Gallery28 from "../Photos/Gallery28.jpg";
 import Gallery29 from "../Photos/Gallery29.jpg";
-import Gallery30 from "../Photos/Gallery30.jpg";
-import Gallery31 from "../Photos/Gallery31.jpg";
-import Gallery32 from "../Photos/Gallery32.jpg";
+// import Gallery30 from "../Photos/Gallery30.jpg";
+// import Gallery31 from "../Photos/Gallery31.jpg";
+// import Gallery32 from "../Photos/Gallery32.jpg";
 
 const images = [
   { id: 1, src: Gallery1 },
@@ -68,9 +68,9 @@ const images = [
   { id: 27, src: Gallery27 },
   { id: 28, src: Gallery28 },
   { id: 29, src: Gallery29 },
-  { id: 30, src: Gallery30 },
-  { id: 31, src: Gallery31 },
-  { id: 32, src: Gallery32 },
+  // { id: 30, src: Gallery30 },
+  // { id: 31, src: Gallery31 },
+  // { id: 32, src: Gallery32 },
 ];
 
 const ImagePaper = styled(Paper)(({ theme }) => ({

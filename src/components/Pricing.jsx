@@ -76,7 +76,7 @@ const Pricing = () => {
                 />
               </Card>
               <Typography variant="h6" sx={{ textAlign: "center", mt: 2 }}>
-                Couples and Family
+                Family and Couples
               </Typography>
               <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
                 Pricing starts at $500

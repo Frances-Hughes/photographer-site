@@ -7,15 +7,13 @@ import {
   CardMedia,
   Container,
   styled,
-  Grid,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import TestReel from "./TestReel";
 import AyaImg from "../Photos/AboutMeImg.png";
-import EventImg from "../Photos/Gallery33.jpg";
+import EventImg from "../Photos/Gallery23.jpg";
 import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { TypeAnimation } from "react-type-animation";
 
 const theme = createTheme({
   components: {
@@ -131,103 +129,34 @@ const AboutMe = () => {
         </Container>
         <TestReel />
         <Container>
-          <Box sx={{ my: "36px", padding: "20px" }}>
-            <Typography
-              variant="h5"
-              sx={{ my: 3, fontWeight: "bold", textAlign: "center" }}
-            >
-              <TypeAnimation
-                sequence={["What people say about me:", 1000]}
-                wrapper="span"
-                speed={50}
-                style={{ fontSize: "2em", display: "inline-block" }}
-              />
-            </Typography>
-            <Box sx={{ flexGrow: 1 }}>
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  filter: "grayscale(100%)",
-                  transition: "filter 0.5s ease",
-                  "&:hover": {
-                    filter: "none",
-                  },
-                }}
-              >
-                <Grid item xs={12} sm={6} md={3}>
-                  <Typography
-                    variant="body1"
-                    sx={{ textAlign: "center", mt: 2 }}
-                  >
-                    "Ayano took some stunning photos of my fiancé and I for our
-                    engagement photoshoot. We are so pleased with her work and
-                    will treasure these pictures for years to come. I cannot
-                    recommend her enough!"
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                  <Typography
-                    variant="body1"
-                    sx={{ textAlign: "center", mt: 2 }}
-                  >
-                    "All the fun, love and laughters very well captured by the
-                    talented @ayanophotography.jp"
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                  <Typography
-                    variant="body1"
-                    sx={{ textAlign: "center", mt: 2 }}
-                  >
-                    "It was the best night. I highly recommend a 'photography
-                    gift' to capture the moment with @ayanophotography.jp"
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={3}>
-                  <Typography
-                    variant="body1"
-                    sx={{ textAlign: "center", mt: 2 }}
-                  >
-                    "Aya did photography for our event at Storyo and she did
-                    such a freaking awesome job! Was so thorough with her
-                    communication and ideas and took SO MANY AMAZING PHOTOS of
-                    the event - my heart is full and I would 100% recommend Aya"
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Box>
-            {/*  */}
-
+          <Box sx={{ my: "24px", padding: "20px" }}>
             <Typography variant="h2" sx={{ textAlign: "center", my: 12 }}>
               About Me
             </Typography>
-            <Typography variant="body1" sx={{ my: 2 }}>
-              Growing up in Osaka, Japan, surrounded by the harmonious blend of
-              urban landscapes and the serenity of nature, nurtured my
-              creativity from a young age. The contrast between the bustling
-              cityscape and tranquil parks cultivated my artistic instincts,
-              unleashing my passion for visual storytelling. My fascination with
-              evoking emotions through art led me to photography—a medium that
-              felt like pure magic from the moment I first held a camera. I
-              prefer to showcase my vibrant, serene, and dynamic life visually
-              rather than explain it verbally.
+            <Typography variant="body1" sx={{ my: 3 }}>
+              I was born and raised in Japan. At 15, I took a leap of faith and
+              moved to New Zealand. I have come to love and call both paradises
+              my home. My journey with photography began with a humble Polaroid
+              gifted to me on my 7th birthday by my father, sparking a lifelong
+              passion for capturing moments frozen in time.
             </Typography>
             <Typography variant="body1" sx={{ my: 2 }}>
-              Inspired by the Japanese saying "ichigo ichie," which means "one
-              time, one meeting," I embrace each moment as a unique opportunity,
-              fueling my curiosity to explore beyond the familiar. This pursuit
-              has led me to delve into various creative endeavors like
-              filmmaking, film photography, design, podcasting, music, and the
-              quest for the perfect pancake. Through challenging conditions and
-              sleepless nights, I've honed my skills, adapting to difficult
-              situations while chasing captivating images. Despite the
-              hardships, I've also learned to appreciate moments of relaxation,
-              like sipping a Margarita by the pool. Life's endless intrigue
-              continually inspires me, and as we embrace each fleeting moment
-              together, I invite you to join me in exploring the beauty of life
-              through my lens. The journey is far from over, and each encounter
-              promises a new adventure and a memory to be treasured forever.
+              In 2021, I jumped into the world of freelance photography to
+              embrace the freedom of storytelling through my lens. Taking photos
+              isn't just about capturing the world around me — it's what makes
+              my heart truly come alive with sparkles of happiness. What drives
+              me is not just the art of photography, but the profound human
+              connections and authentic moments that it allows me to preserve.
+            </Typography>
+            <Typography variant="body1" sx={{ my: 2 }}>
+              Each click of the shutter is an opportunity to create lasting
+              memories, to document the fleeting expressions and emotions that
+              define our lives. I seek to capture the essence of each moment,
+              allowing it to live on through my photographs.
+            </Typography>
+            <Typography variant="body1" sx={{ my: 2 }}>
+              Join me on this visual journey, where every frame tells a story of
+              connection, emotion, and the timeless beauty of life.
             </Typography>
             <CardMedia
               component="img"

@@ -18,6 +18,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
+    "react-intersection-observer": "^9.8.2",
     "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "^5.0.1",
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.18.6",
     "@babel/plugin-transform-class-properties": "latest",
     "@babel/plugin-transform-nullish-coalescing-operator": "latest",
     "@babel/plugin-transform-numeric-separator": "latest",
@@ -58,8 +60,7 @@
     "@babel/plugin-transform-private-methods": "latest",
     "@babel/plugin-transform-private-property-in-object": "latest",
     "@jridgewell/sourcemap-codec": "latest",
-    "@rollup/plugin-terser": "latest",
-    "@babel/plugin-proposal-private-property-in-object": "^7.18.6"
+    "@rollup/plugin-terser": "latest"
   },
   "resolutions": {
     "@babel/plugin-proposal-nullish-coalescing-operator": "latest",
