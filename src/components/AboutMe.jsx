@@ -166,7 +166,7 @@ const AboutMe = () => {
               alt="Happy People at an event"
               sx={{
                 maxWidth: "100%",
-                my: 4,
+                mt: 12,
                 borderRadius: "15px",
                 filter: "grayscale(100%)",
                 transition: "filter 0.5s ease",
@@ -184,7 +184,20 @@ const AboutMe = () => {
                 justifyContent: "center",
               }}
             >
-              <Button variant="contained">VIEW MY WORK</Button>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "#363B40",
+                  transform: "scale(1.3)",
+                  "&:hover": {
+                    backgroundColor: "gray",
+                  },
+                  fontSize: "1.2rem",
+                  my: 8,
+                }}
+              >
+                VIEW MY WORK
+              </Button>
             </Link>
           </Box>
         </Container>
