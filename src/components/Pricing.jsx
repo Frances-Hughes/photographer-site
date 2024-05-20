@@ -27,7 +27,7 @@ const Pricing = () => {
             sequence={["Pricing:", 1000]}
             wrapper="span"
             speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
+            style={{ fontSize: "3em", display: "inline-block" }}
           />
         </Typography>
         <Typography variant="body1" sx={{ textAlign: "center" }}>
