@@ -2,18 +2,17 @@ import React from "react";
 import {
   Box,
   Typography,
-  Grid,
+  // Grid,
   ThemeProvider,
   createTheme,
 } from "@mui/material";
 
 import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
 
-// import AB from "../../public/AB.png";
-
 import { motion } from "framer-motion";
-import { TypeAnimation } from "react-type-animation";
+// import { TypeAnimation } from "react-type-animation";
 import AnimatedDivider from "./AnimatedDivider";
+import Testimonials from "./Testimonials";
 
 const theme = createTheme({
   typography: {
@@ -147,6 +146,7 @@ const LandingPage = () => {
           padding: "2em",
           margin: "auto",
           maxWidth: "800px",
+          my: 8,
           "& h2": { fontFamily: "'Yuji Syuku'" },
           "& p": {
             fontFamily:
@@ -155,12 +155,12 @@ const LandingPage = () => {
         }}
       >
         <Typography variant="h2">一期一会</Typography>
-        <Typography variant="h4" sx={{ my: 2 }}>
+        <Typography variant="h4" sx={{ my: 2, mx: 2, p: 4 }}>
           [/ichigo-ichie/] a Japanese idiom
         </Typography>
         <Typography
           variant="h5"
-          sx={{ my: 2, display: "flex", justifyContent: "center" }}
+          sx={{ my: 2, mx: 2, display: "flex", justifyContent: "center" }}
         >
           a cultural concept of treasuring the unrepeatable nature of a moment
         </Typography>
@@ -168,6 +168,7 @@ const LandingPage = () => {
           variant="h5"
           sx={{
             my: 2,
+            mx: 2,
             display: "flex",
             justifyContent: "center",
             color: "gray",
@@ -179,59 +180,7 @@ const LandingPage = () => {
       </Box>
 
       <AnimatedDivider />
-      <Box sx={{ my: "36px", padding: "20px" }}>
-        <Typography
-          variant="h5"
-          sx={{ my: 3, fontWeight: "bold", textAlign: "center" }}
-        >
-          <TypeAnimation
-            sequence={["What people say about me:", 1000]}
-            wrapper="span"
-            speed={50}
-            style={{ fontSize: "2em", display: "inline-block" }}
-          />
-        </Typography>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            filter: "grayscale(100%)",
-            transition: "filter 0.5s ease",
-            "&:hover": {
-              filter: "none",
-            },
-          }}
-        >
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-              "Ayano took some stunning photos of my fiancé and I for our
-              engagement photoshoot. We are so pleased with her work and will
-              treasure these pictures for years to come. I cannot recommend her
-              enough!"
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-              "All the fun, love and laughters very well captured by the
-              talented @ayanophotography.jp"
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-              "It was the best night. I highly recommend a 'photography gift' to
-              capture the moment with @ayanophotography.jp"
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6} md={3}>
-            <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-              "Aya did photography for our event at Storyo and she did such a
-              freaking awesome job! Was so thorough with her communication and
-              ideas and took SO MANY AMAZING PHOTOS of the event - my heart is
-              full and I would 100% recommend Aya"
-            </Typography>
-          </Grid>
-        </Grid>
-      </Box>
+      <Testimonials />
     </ThemeProvider>
   );
 };

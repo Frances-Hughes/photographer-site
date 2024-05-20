@@ -96,19 +96,14 @@ const ContactMe = () => {
           <Typography
             variant="h5"
             sx={{
-              mb: 12,
+              mb: 6,
               fontWeight: "bold",
               height: "125px",
               overflow: "hidden",
             }}
           >
             <TypeAnimation
-              sequence={[
-                "Need a photographer?",
-                1000,
-                "Flick me a message:",
-                1000,
-              ]}
+              sequence={["Need a photographer?", 1000, "Contact Me:", 1000]}
               wrapper="span"
               speed={50}
               style={{ fontSize: "2em", display: "inline-block" }}

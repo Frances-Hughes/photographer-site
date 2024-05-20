@@ -70,7 +70,7 @@ const Footer = () => {
           <Grid item xs={2.4}>
             <Tooltip title="Visit my Facebook page" placement="top">
               <Link
-                href="https://www.facebook.com/ayanophotography.nz"
+                href="https://www.facebook.com/ayanophotography.jp"
                 target="_blank"
                 rel="noopener noreferrer"
                 color="inherit"
