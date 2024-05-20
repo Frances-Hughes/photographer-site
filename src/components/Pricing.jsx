@@ -63,7 +63,7 @@ const Pricing = () => {
                 Business and Corporate Events
               </Typography>
               <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-                Pricing starts at $500
+                Pricing available upon request
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -79,7 +79,7 @@ const Pricing = () => {
                 Family and Couples
               </Typography>
               <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-                Pricing starts at $500
+                Pricing available upon request
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
@@ -95,12 +95,12 @@ const Pricing = () => {
                 Cultural and Community Events
               </Typography>
               <Typography variant="body1" sx={{ textAlign: "center", mt: 2 }}>
-                Pricing starts at $500
+                Pricing available upon request
               </Typography>
             </Grid>
           </Grid>
         </Box>
-        <Typography variant="h6" sx={{ textAlign: "center", my: 3 }}>
+        <Typography variant="h6" sx={{ textAlign: "center", my: 8 }}>
           If you’d like detailed session and pricing info, just click the button
           below.
         </Typography>
@@ -116,9 +116,11 @@ const Pricing = () => {
             variant="contained"
             sx={{
               backgroundColor: "#363B40",
+              transform: "scale(1.3)",
               "&:hover": {
                 backgroundColor: "gray",
               },
+              fontSize: "1.2rem",
             }}
           >
             TELL ME MORE

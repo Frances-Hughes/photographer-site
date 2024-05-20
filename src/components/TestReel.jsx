@@ -66,7 +66,7 @@ export default function TestReel() {
         alignItems: "center",
         overflowX: "hidden",
         height: "100%",
-        minWidth: "200%",
+        minWidth: "120vw",
         whiteSpace: "nowrap",
         willChange: "transform",
         perspective: "1000px",

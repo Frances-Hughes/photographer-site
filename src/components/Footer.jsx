@@ -35,7 +35,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/ayano-masuda/"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit" // Changed from "black" to use the theme's contrast text color
+                color="inherit"
                 underline="hover"
               >
                 <LinkedInIcon
@@ -54,7 +54,7 @@ const Footer = () => {
                 href="https://www.instagram.com/ayanophotography.jp/"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit" // Changed from "black" to use the theme's contrast text color
+                color="inherit"
                 underline="hover"
               >
                 <InstagramIcon
@@ -73,7 +73,7 @@ const Footer = () => {
                 href="https://www.facebook.com/ayanophotography.nz"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit" // Changed from "black" to use the theme's contrast text color
+                color="inherit"
                 underline="hover"
               >
                 <FacebookIcon
@@ -92,7 +92,7 @@ const Footer = () => {
                 href="/termsandconditions"
                 target="_blank"
                 rel="noopener noreferrer"
-                color="inherit" // Changed from "black" to use the theme's contrast text color
+                color="inherit"
                 underline="hover"
               >
                 <ArtTrackIcon

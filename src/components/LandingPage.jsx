@@ -82,7 +82,7 @@ const LandingPage = () => {
               sx={{
                 backgroundImage: `url(${LandingImg})`,
                 filter: "grayscale(100%)",
-                backgroundSize: "100vw auto",
+                backgroundSize: "cover",
                 backgroundPosition: "center",
                 paddingX: "4px",
                 fontWeight: "bold",
@@ -107,7 +107,7 @@ const LandingPage = () => {
             left: 0,
             width: "100%",
             backgroundImage: `url(${LandingImg})`,
-            backgroundSize: "100vw auto",
+            backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
             "& .title_wrapper": {
@@ -126,7 +126,6 @@ const LandingPage = () => {
                 zIndex: 5,
                 bgcolor: "black",
                 opacity: 1, // This will be the end state of the animation
-                // backgroundColor: "white",
                 animation: "fadeInRight 1.5s ease-out forwards", // Adjust duration and easing to match your fadeIn function
                 animationDelay: "0.2s", // This is your delay before the animation starts
                 paddingX: "4px",
