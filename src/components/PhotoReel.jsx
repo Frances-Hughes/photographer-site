@@ -1,97 +1,49 @@
-// import React, { useState, useEffect, useRef } from "react";
-// import { Box } from "@mui/material";
+import React, { useEffect } from "react";
+import "./PhotoReel.css";
+import Reel1 from "../Photos/Reel/Reel1.png";
+import Reel2 from "../Photos/Reel/Reel2.jpg";
+import Reel3 from "../Photos/Reel/Reel3.png";
+import Reel4 from "../Photos/Reel/Reel4.jpeg";
+import Reel5 from "../Photos/Reel/Reel5.jpg";
+import Reel6 from "../Photos/Reel/Reel6.jpg";
+import Reel7 from "../Photos/Reel/Reel7.jpg";
+import Reel8 from "../Photos/Reel/Reel8.jpg";
+import Reel9 from "../Photos/Reel/Reel9.jpg";
+import Reel10 from "../Photos/Reel/Reel10.jpg";
+import Reel11 from "../Photos/Reel/Reel11.jpg";
+import Reel12 from "../Photos/Reel/Reel12.png";
 
-// const baseImages = [
-//   // Add all your images
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
-//   "https://assets-global.website-files.com/60db5e59f76ae577e9f50d42/635e509877408d75da804c25_Parker%20Scmidt-205.jpg",
+const images = [
+  Reel1,
+  Reel2,
+  Reel3,
+  Reel4,
+  Reel5,
+  Reel6,
+  Reel7,
+  Reel8,
+  Reel9,
+  Reel10,
+  Reel11,
+  Reel12,
+];
 
-//   // Replicate this array as needed to increase the number of images shown
-// ];
+const PhotoReel = () => {
+  useEffect(() => {
+    const logosContainer = document.querySelector(".logos");
+    const logosSlide = document.querySelector(".logos-slide").cloneNode(true);
+    logosContainer.appendChild(logosSlide);
+  }, []);
 
-// // Duplicate the images array for the looping effect
-// const images = [...baseImages, ...baseImages];
+  return (
+    <div className="logos">
+      <div className="logos-slide">
+        {images.map((image, index) => (
+          <img src={image} alt={`Reel ${index + 1}`} key={index} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
-// export default function PhotoReel() {
-//   const [scrollPosition, setScrollPosition] = useState(0);
-//   const containerRef = useRef();
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const scrollHeight = document.body.scrollHeight - window.innerHeight;
-//       const scrolledRatio = window.scrollY / scrollHeight;
-//       // The factor here slows down the scrolling effect, making it more gradual.
-//       const factor = 0.2;
-//       const newPosition = scrolledRatio * document.body.scrollHeight * factor;
-
-//       setScrollPosition(newPosition);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   // Calculate the width of a single image set to adjust the transform when nearing the end
-//   const singleSetWidth = (images.length / 2) * (250 + 1000); // Adjust 250 + 10 based on actual image width + margin
-
-//   const adjustForLoop = () => {
-//     if (scrollPosition >= singleSetWidth) {
-//       // Reset position to start for a loop effect
-//       return `translateX(${-(scrollPosition - singleSetWidth)}px)`;
-//     }
-//     return `translateX(${-scrollPosition}px)`;
-//   };
-
-//   return (
-//     <Box
-//       ref={containerRef}
-//       sx={{
-//         display: "flex",
-//         alignItems: "center",
-//         overflowX: "hidden",
-//         height: "250px", // Fixed height for all images
-//         minWidth: "200%", // Ensure the container fills the width
-//         whiteSpace: "nowrap", // Keep images in a single line
-//         willChange: "transform",
-//       }}
-//       style={{
-//         transform: adjustForLoop(),
-//       }}
-//     >
-//       {images.map((src, index) => (
-//         <Box
-//           key={index}
-//           component="img"
-//           src={src}
-//           sx={{
-//             height: "250px", // Ensure all images are 250px tall
-//             marginRight: "10px", // Space between images
-//             flexShrink: 0, // Prevent images from shrinking
-//           }}
-//           alt={`Image ${index}`}
-//         />
-//       ))}
-//     </Box>
-//   );
-// }
+export default PhotoReel;

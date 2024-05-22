@@ -9,7 +9,8 @@ import {
   styled,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import TestReel from "./TestReel";
+// import TestReel from "./TestReel";
+import PhotoReel from "./PhotoReel";
 import AyaImg from "../Photos/AboutMeImg.jpg";
 import EventImg from "../Photos/Gallery23.jpg";
 import TypeWriterText from "./TypeWriterText";
@@ -127,12 +128,12 @@ const AboutMe = () => {
         >
           <TypeWriterText />
         </Container>
-        <Box sx={{ paddingLeft: 10 }}>
-          <TestReel />
+        <Box sx={{ py: 12 }}>
+          <PhotoReel />
         </Box>
 
         <Container>
-          <Box sx={{ my: "24px", padding: "20px" }}>
+          <Box sx={{ my: "12px", padding: "12px" }}>
             <Typography variant="h2" sx={{ textAlign: "center", my: 12 }}>
               About Me
             </Typography>
