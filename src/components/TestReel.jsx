@@ -82,7 +82,7 @@ export default function TestReel() {
         <Box sx={{ px: "3px" }} key={index}>
           <Box
             component="img"
-            src={src} // This now uses local image paths
+            src={src}
             sx={{
               height: "250px",
               margin: "0 10px",

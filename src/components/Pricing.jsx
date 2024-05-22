@@ -51,12 +51,12 @@ const Pricing = () => {
             }}
           >
             <Grid item xs={12} sm={6} md={4}>
-              <Card>
+              <Card sx={{ mx: 1 }}>
                 <CardMedia
                   component="img"
                   height="100%"
                   image={Image1}
-                  alt="Image 1"
+                  alt="Photo of dancers at an event"
                 />
               </Card>
               <Typography variant="h6" sx={{ textAlign: "center", mt: 2 }}>
@@ -67,12 +67,12 @@ const Pricing = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card>
+              <Card sx={{ mx: 1 }}>
                 <CardMedia
                   component="img"
                   height="100%"
                   image={Image2}
-                  alt="Image 2"
+                  alt="Photo of a client and her baby"
                 />
               </Card>
               <Typography variant="h6" sx={{ textAlign: "center", mt: 2 }}>
@@ -83,12 +83,12 @@ const Pricing = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={6} md={4}>
-              <Card>
+              <Card sx={{ mx: 1 }}>
                 <CardMedia
                   component="img"
                   height="100%"
                   image={Image3}
-                  alt="Image 3"
+                  alt="Photo of a cultural event"
                 />
               </Card>
               <Typography variant="h6" sx={{ textAlign: "center", mt: 2 }}>
