@@ -34,7 +34,7 @@ const Testimonials = () => {
               fontSize: "1.1rem",
               textAlign: "justify",
               my: 2,
-              mx: 2,
+              mx: 1.5,
               p: 2,
             }}
           >
@@ -54,7 +54,7 @@ const Testimonials = () => {
               fontSize: "1.1rem",
               textAlign: "justify",
               my: 2,
-              mx: 2,
+              mx: 1.5,
               p: 2,
             }}
           >
@@ -74,13 +74,16 @@ const Testimonials = () => {
               fontSize: "1.1rem",
               textAlign: "justify",
               my: 2,
-              mx: 2,
+              mx: 1.5,
               p: 2,
             }}
           >
-            "Ayano Photography’s work was exceptional. A professional service
-            that went beyond expectations and showcased our sport with insight
-            and impact. I look forward to working with Ayano again."
+            "Ayano was an absolute pleasure to work with for our 3 Kapu Kawhe
+            Programme Launch Event. She helped capture some very special moments
+            on the night that we use for reports and on our website. Ayano is
+            incredibly professional, friendly and a joy to be around - which is
+            very important for event photography for guests to feel comfortable
+            with requesting for photos."
           </Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={3}>
@@ -90,14 +93,17 @@ const Testimonials = () => {
               fontSize: "1.1rem",
               textAlign: "justify",
               my: 2,
-              mx: 2,
+              mx: 1.5,
               p: 2,
             }}
           >
-            "Aya did photography for our event at Storyo and she did such a
-            freaking awesome job! Was so thorough with her communication and
-            ideas and took SO MANY AMAZING PHOTOS of the event - my heart is
-            full and I would 100% recommend Aya"
+            "Ayano always takes photos of my turning points in life. She took
+            great photos for any occasions, including weddings, maternity
+            photos, newborn photos, and travels. I'm always moved by the facial
+            expressions and expressions that only she can bring out, and I find
+            myself looking back at the photos over and over again. Please take
+            photos of important events in my life again! I am always grateful
+            for your help!"
           </Typography>
         </Grid>
       </Grid>
