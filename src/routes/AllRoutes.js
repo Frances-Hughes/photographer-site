@@ -6,7 +6,7 @@ import ContactMe from "../components/ContactMe";
 import Gallery from "../components/Gallery";
 import PageNotFound from "../components/PageNotFound";
 import TermsConditions from "../components/TermsConditions";
-import Pricing from "../components/Pricing";
+// import Pricing from "../components/Pricing";
 
 const AllRoutes = () => {
   return (
@@ -16,7 +16,7 @@ const AllRoutes = () => {
       <Route path="gallery" element={<Gallery />} />
       <Route path="/contactme" element={<ContactMe />} />
       <Route path="/termsandconditions" element={<TermsConditions />} />
-      <Route path="/pricing" element={<Pricing />} />
+      {/* <Route path="/pricing" element={<Pricing />} /> */}
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

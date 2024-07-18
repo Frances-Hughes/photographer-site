@@ -4,10 +4,10 @@ import { TypeAnimation } from "react-type-animation";
 
 const Testimonials = () => {
   return (
-    <Box sx={{ my: "36px", padding: "20px" }}>
+    <Box sx={{ my: "36px", padding: "20px", mx: 15 }}>
       <Typography
         variant="h5"
-        sx={{ my: 3, fontWeight: "bold", textAlign: "center" }}
+        sx={{ my: 5, fontWeight: "bold", textAlign: "center" }}
       >
         <TypeAnimation
           sequence={["What people say about me:", 1000]}
@@ -18,7 +18,7 @@ const Testimonials = () => {
       </Typography>
       <Grid
         container
-        spacing={2}
+        spacing={0}
         sx={{
           filter: "grayscale(100%)",
           transition: "filter 0.5s ease",
@@ -27,10 +27,16 @@ const Testimonials = () => {
           },
         }}
       >
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={3}>
           <Typography
             variant="body1"
-            sx={{ textAlign: "center", my: 2, mx: 2, bgcolor: "gray", p: 4 }}
+            sx={{
+              fontSize: "1.1rem",
+              textAlign: "justify",
+              my: 2,
+              mx: 2,
+              p: 2,
+            }}
           >
             "Ayano captured some stunning photos of my fiancé and me during our
             engagement photoshoot, truly going above and beyond to make the
@@ -41,10 +47,16 @@ const Testimonials = () => {
             enough; she exceeded all our expectations!"
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={3}>
           <Typography
             variant="body1"
-            sx={{ textAlign: "center", my: 2, mx: 2, bgcolor: "gray", p: 4 }}
+            sx={{
+              fontSize: "1.1rem",
+              textAlign: "justify",
+              my: 2,
+              mx: 2,
+              p: 2,
+            }}
           >
             "For the past few years, when Ayano is in Japan, she has taken many
             photos of us on stage and in the dressing room of our theatre
@@ -55,20 +67,32 @@ const Testimonials = () => {
             return to Japan!"
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={3}>
           <Typography
             variant="body1"
-            sx={{ textAlign: "center", my: 2, mx: 2, bgcolor: "gray", p: 4 }}
+            sx={{
+              fontSize: "1.1rem",
+              textAlign: "justify",
+              my: 2,
+              mx: 2,
+              p: 2,
+            }}
           >
             "Ayano Photography’s work was exceptional. A professional service
             that went beyond expectations and showcased our sport with insight
             and impact. I look forward to working with Ayano again."
           </Typography>
         </Grid>
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={6} md={3}>
           <Typography
             variant="body1"
-            sx={{ textAlign: "center", my: 2, mx: 2, bgcolor: "gray", p: 4 }}
+            sx={{
+              fontSize: "1.1rem",
+              textAlign: "justify",
+              my: 2,
+              mx: 2,
+              p: 2,
+            }}
           >
             "Aya did photography for our event at Storyo and she did such a
             freaking awesome job! Was so thorough with her communication and

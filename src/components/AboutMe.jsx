@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 // import TestReel from "./TestReel";
 import PhotoReel from "./PhotoReel";
 import AyaImg from "../Photos/AboutMeImg.jpg";
-import EventImg from "../Photos/Gallery23.jpg";
+import EventImg from "../Photos/Gallery11.jpg";
 import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 

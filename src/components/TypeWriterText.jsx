@@ -10,12 +10,14 @@ const TypeWriterText = () => {
           "I'm dedicated to ensuring",
           "a complete and positive experience",
           "for every client I serve",
-          "whether it's a corporate event",
-          "or a family photo session",
         ].map((text, index) => (
           <Typography
             key={index}
-            sx={{ ...typewriterTextStyle, animationDelay: `${2.5 * index}s` }}
+            sx={{
+              fontSize: { xs: "1rem", md: "2rem" },
+              ...typewriterTextStyle,
+              animationDelay: `${2.5 * index}s`,
+            }}
           >
             {text}
           </Typography>

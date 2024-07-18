@@ -15,7 +15,6 @@ import LogoNav from "../Photos/logo.png";
 const pages = [
   { title: "About Me", path: "/aboutme" },
   { title: "Gallery", path: "/gallery" },
-  { title: "Pricing", path: "/pricing" },
   { title: "Contact Me", path: "/contactme" },
 ];
 

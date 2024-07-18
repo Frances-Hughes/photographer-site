@@ -79,7 +79,8 @@ const LandingPage = () => {
             <Typography
               variant="h1"
               sx={{
-                backgroundImage: `url(${LandingImg})`,
+                // backgroundImage: `url(${LandingImg})`,
+                backgroundColor: "white",
                 filter: "grayscale(100%)",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -155,7 +156,7 @@ const LandingPage = () => {
         }}
       >
         <Typography variant="h2">一期一会</Typography>
-        <Typography variant="h4" sx={{ my: 2, mx: 2, p: 4 }}>
+        <Typography variant="h4" sx={{ my: 2, py: 4 }}>
           [/ichigo-ichie/] a Japanese idiom
         </Typography>
         <Typography
