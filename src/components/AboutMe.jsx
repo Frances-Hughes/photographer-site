@@ -6,6 +6,7 @@ import {
   Card,
   CardMedia,
   Container,
+  Skeleton,
   styled,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -39,6 +40,7 @@ const isAppleDevice = /Mac|iPhone|iPod|iPad/.test(navigator.userAgent);
 const AboutMe = () => {
   const [offsetY, setOffsetY] = useState(window.pageYOffset * 0.7);
   const [isAtTop, setIsAtTop] = useState(window.scrollY === 0);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +53,10 @@ const AboutMe = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
 
   const StyledCard = styled(Card)({
     position: "relative",
@@ -89,11 +95,21 @@ const AboutMe = () => {
           <Box sx={{ my: 15 }}>
             {!isAppleDevice ? (
               <StyledCard sx={{ transform: `translateY(-${offsetY}px)` }}>
+                {!imageLoaded && (
+                  <Skeleton
+                    variant="rectangular"
+                    width="100%"
+                    height="500px"
+                    sx={{ borderRadius: "15px" }}
+                  />
+                )}
                 <CardMedia
                   component="img"
                   image={AyaImg}
                   alt="Background Image"
+                  onLoad={handleImageLoad}
                   sx={{
+                    display: imageLoaded ? "block" : "none",
                     height: "500px",
                     width: "100%",
                     objectFit: "cover",
@@ -110,11 +126,21 @@ const AboutMe = () => {
               </StyledCard>
             ) : (
               <Box>
+                {!imageLoaded && (
+                  <Skeleton
+                    variant="rectangular"
+                    width="100%"
+                    height="100%"
+                    sx={{ borderRadius: "15px" }}
+                  />
+                )}
                 <CardMedia
                   component="img"
                   image={AyaImg}
                   alt="Background Image"
+                  onLoad={handleImageLoad}
                   sx={{
+                    display: imageLoaded ? "block" : "none",
                     height: "100%",
                     width: { xs: "100%", md: "30vw" },
                     objectFit: "cover",
