@@ -52,7 +52,7 @@ const AboutMe = () => {
     zIndex: 2,
     transition: "transform 0.1s ease-in-out",
     willChange: "transform",
-    height: "500px",
+    height: "420px",
     marginTop: "0",
     backgroundColor: "transparent",
   });
