@@ -96,7 +96,7 @@ const AboutMe = () => {
               sx={{
                 height: "500px",
                 width: "100%",
-                objectFit: "cover",
+                // objectFit: "cover",
                 borderRadius: "15px",
                 filter: "grayscale(100%)",
                 transition: "filter 0.5s ease",
