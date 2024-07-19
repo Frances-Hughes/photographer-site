@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import PhotoReel from "./PhotoReel";
 import AyaImg from "../Photos/AboutMeImg.jpg";
 import EventImg from "../Photos/Gallery11.jpg";
-import TypeWriterText from "./TypeWriterText";
+// import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -133,10 +133,11 @@ const AboutMe = () => {
         <Container
           sx={{
             alignItems: "center",
-            mt: 15,
+            my: 15,
           }}
         >
-          <TypeWriterText />
+          <Typography variant="h2">Hello World</Typography>
+          {/* <TypeWriterText /> */}
         </Container>
         <Box sx={{ py: 12 }}>
           <PhotoReel />
