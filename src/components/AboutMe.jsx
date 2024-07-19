@@ -134,7 +134,7 @@ const AboutMe = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            mt: 5,
+            mt: 15,
           }}
         >
           <TypeWriterText />
