@@ -110,7 +110,7 @@ const AboutMe = () => {
               />
             </StyledCard>
           ) : (
-            <Box sx={{ my: "42px" }}>
+            <Box sx={{ my: 20 }}>
               <CardMedia
                 component="img"
                 image={AyaImg}
@@ -132,8 +132,7 @@ const AboutMe = () => {
         </Box>
         <Container
           sx={{
-            display: "flex",
-            justifyContent: "center",
+            alignItems: "center",
             mt: 15,
           }}
         >
