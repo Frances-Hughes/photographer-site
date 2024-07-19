@@ -87,10 +87,7 @@ const AboutMe = () => {
             Masuda
           </Typography>
           <StyledCard
-            sx={{
-              my: "42px",
-              transform: { xs: 0, md: `translateY(-${offsetY}px)` },
-            }}
+            sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }}
           >
             <CardMedia
               component="img"
