@@ -1,16 +1,7 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  // Grid,
-  ThemeProvider,
-  createTheme,
-} from "@mui/material";
-
+import { Box, Typography, ThemeProvider, createTheme } from "@mui/material";
 import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
-
 import { motion } from "framer-motion";
-// import { TypeAnimation } from "react-type-animation";
 import AnimatedDivider from "./AnimatedDivider";
 import Testimonials from "./Testimonials";
 
@@ -79,7 +70,6 @@ const LandingPage = () => {
             <Typography
               variant="h1"
               sx={{
-                // backgroundImage: `url(${LandingImg})`,
                 backgroundColor: "white",
                 filter: "grayscale(100%)",
                 backgroundSize: "cover",
@@ -97,6 +87,7 @@ const LandingPage = () => {
           </Box>
         </Box>
 
+        {/* Second container */}
         <Box
           sx={{
             clip: "rect(0, auto, auto, 0)",

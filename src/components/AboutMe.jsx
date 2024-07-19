@@ -112,9 +112,9 @@ const AboutMe = () => {
                 borderRadius: "15px",
                 filter: "grayscale(100%)",
                 transition: "filter 0.5s ease",
-                "&:hover": {
-                  filter: "none", // Remove filter on hover
-                },
+                // "&:hover": {
+                //   filter: "none",
+                // },
               }}
             />
           </StyledCard>
