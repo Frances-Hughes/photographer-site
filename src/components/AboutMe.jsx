@@ -34,6 +34,8 @@ const theme = createTheme({
   },
 });
 
+const isAppleDevice = /Mac|iPhone|iPod|iPad/.test(navigator.userAgent);
+
 const AboutMe = () => {
   const [offsetY, setOffsetY] = useState(window.pageYOffset * 0.7);
   const [isAtTop, setIsAtTop] = useState(window.scrollY === 0);
@@ -84,29 +86,30 @@ const AboutMe = () => {
           >
             Masuda
           </Typography>
-          <StyledCard
-            sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }}
-          >
-            <CardMedia
-              component="img"
-              image={AyaImg}
-              alt="Background Image"
-              loading="lazy"
-              sx={{
-                height: "500px",
-                width: "100%",
-                objectFit: "cover",
-                borderRadius: "15px",
-                filter: "grayscale(100%)",
-                transition: "filter 0.5s ease",
-                "&:hover": {
-                  filter: "none",
-                },
-                // Force hardware acceleration for smoother rendering
-                WebkitTransform: "translateZ(0)",
-              }}
-            />
-          </StyledCard>
+          {!isAppleDevice && (
+            <StyledCard
+              sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }}
+            >
+              <CardMedia
+                component="img"
+                image={AyaImg}
+                alt="Background Image"
+                sx={{
+                  height: "500px",
+                  width: "100%",
+                  objectFit: "cover",
+                  borderRadius: "15px",
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.5s ease",
+                  "&:hover": {
+                    filter: "none",
+                  },
+                  WebkitTransform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                }}
+              />
+            </StyledCard>
+          )}
         </Box>
         <Container
           sx={{
@@ -176,6 +179,7 @@ const AboutMe = () => {
                   filter: "none",
                 },
                 WebkitTransform: "translateZ(0)",
+                backfaceVisibility: "hidden",
               }}
               image={EventImg}
             />
