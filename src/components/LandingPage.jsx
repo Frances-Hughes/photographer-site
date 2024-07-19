@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, ThemeProvider, createTheme } from "@mui/material";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import AnimatedDivider from "./AnimatedDivider";
 import Testimonials from "./Testimonials";
 import LandingPageNotApple from "./LandingPageNotApple";
@@ -32,10 +32,10 @@ const theme = createTheme({
   },
 });
 
-const variants = {
-  hidden: { opacity: 0, x: 100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1.5, delay: 0.2 } },
-};
+// const variants = {
+//   hidden: { opacity: 0, x: 100 },
+//   visible: { opacity: 1, x: 0, transition: { duration: 1.5, delay: 0.2 } },
+// };
 
 const isAppleDevice = () => {
   return (

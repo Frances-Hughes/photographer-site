@@ -1,33 +1,33 @@
 import React from "react";
-import { Box, Typography, createTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material"; //createTheme
 import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
 import { motion } from "framer-motion";
 
-const theme = createTheme({
-  typography: {
-    fontFamily: [
-      "Yuji Syuku",
-      "BlinkMacSystemFont",
-      '"Segoe UI"',
-      "Helvetica",
-      "Arial",
-      "sans-serif",
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-    ].join(","),
-    h1: {
-      fontWeight: 900,
-      fontSize: "42px",
-      textTransform: "uppercase",
-      textAlign: "center",
-      color: "white", // Fallback color
-      textFillColor: "transparent",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
-      WebkitBackgroundClip: "text",
-    },
-  },
-});
+// const theme = createTheme({
+//   typography: {
+//     fontFamily: [
+//       "Yuji Syuku",
+//       "BlinkMacSystemFont",
+//       '"Segoe UI"',
+//       "Helvetica",
+//       "Arial",
+//       "sans-serif",
+//       '"Apple Color Emoji"',
+//       '"Segoe UI Emoji"',
+//     ].join(","),
+//     h1: {
+//       fontWeight: 900,
+//       fontSize: "42px",
+//       textTransform: "uppercase",
+//       textAlign: "center",
+//       color: "white", // Fallback color
+//       textFillColor: "transparent",
+//       WebkitTextFillColor: "transparent",
+//       backgroundClip: "text",
+//       WebkitBackgroundClip: "text",
+//     },
+//   },
+// });
 
 const variants = {
   hidden: { opacity: 0, x: 100 },
