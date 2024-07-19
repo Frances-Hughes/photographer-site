@@ -106,7 +106,7 @@ const AboutMe = () => {
               image={AyaImg}
               alt="Background Image"
               sx={{
-                height: "500px",
+                height: "420px",
                 width: "100%",
                 objectFit: "cover",
                 borderRadius: "15px",
