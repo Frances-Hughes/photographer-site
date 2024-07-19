@@ -110,7 +110,7 @@ const AboutMe = () => {
               />
             </StyledCard>
           ) : (
-            <StyledCard sx={{ my: "42px" }}>
+            <Box sx={{ my: "42px" }}>
               <CardMedia
                 component="img"
                 image={AyaImg}
@@ -125,11 +125,9 @@ const AboutMe = () => {
                   "&:hover": {
                     filter: "none",
                   },
-                  WebkitTransform: "translateZ(0)",
-                  backfaceVisibility: "hidden",
                 }}
               />
-            </StyledCard>
+            </Box>
           )}
         </Box>
         <Container
