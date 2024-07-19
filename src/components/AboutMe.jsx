@@ -96,10 +96,10 @@ const AboutMe = () => {
               sx={{
                 height: "500px",
                 width: "100%",
-                // objectFit: "cover",
+                objectFit: "cover",
                 borderRadius: "15px",
-                // filter: "grayscale(100%)",
-                // transition: "filter 0.5s ease",
+                filter: "grayscale(100%)",
+                transition: "filter 0.5s ease",
                 "&:hover": {
                   filter: "none",
                 },
@@ -107,7 +107,7 @@ const AboutMe = () => {
             />
           </StyledCard>
         </Box>
-        <Container
+        {/* <Container
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -115,7 +115,7 @@ const AboutMe = () => {
           }}
         >
           <TypeWriterText />
-        </Container>
+        </Container> */}
         <Box sx={{ py: 12 }}>
           <PhotoReel />
         </Box>
