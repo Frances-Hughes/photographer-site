@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import PhotoReel from "./PhotoReel";
 import AyaImg from "../Photos/AboutMeImg.jpg";
 import EventImg from "../Photos/Gallery11.jpg";
-// import TypeWriterText from "./TypeWriterText";
+import TypeWriterText from "./TypeWriterText";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -86,58 +86,57 @@ const AboutMe = () => {
           >
             Masuda
           </Typography>
-          {!isAppleDevice ? (
-            <StyledCard
-              sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }}
-            >
-              <CardMedia
-                component="img"
-                image={AyaImg}
-                alt="Background Image"
-                sx={{
-                  height: "500px",
-                  width: "100%",
-                  objectFit: "cover",
-                  borderRadius: "15px",
-                  filter: "grayscale(100%)",
-                  transition: "filter 0.5s ease",
-                  "&:hover": {
-                    filter: "none",
-                  },
-                  WebkitTransform: "translateZ(0)",
-                  backfaceVisibility: "hidden",
-                }}
-              />
-            </StyledCard>
-          ) : (
-            <Box sx={{ my: 20 }}>
-              <CardMedia
-                component="img"
-                image={AyaImg}
-                alt="Background Image"
-                sx={{
-                  height: "100%",
-                  width: { xs: "100%", md: "30vw" },
-                  objectFit: "cover",
-                  borderRadius: "15px",
-                  filter: "grayscale(100%)",
-                  transition: "filter 0.5s ease",
-                  "&:hover": {
-                    filter: "none",
-                  },
-                }}
-              />
-            </Box>
-          )}
+          <Box sx={{ my: 15 }}>
+            {!isAppleDevice ? (
+              <StyledCard sx={{ transform: `translateY(-${offsetY}px)` }}>
+                <CardMedia
+                  component="img"
+                  image={AyaImg}
+                  alt="Background Image"
+                  sx={{
+                    height: "500px",
+                    width: "100%",
+                    objectFit: "cover",
+                    borderRadius: "15px",
+                    filter: "grayscale(100%)",
+                    transition: "filter 0.5s ease",
+                    "&:hover": {
+                      filter: "none",
+                    },
+                    WebkitTransform: "translateZ(0)",
+                    backfaceVisibility: "hidden",
+                  }}
+                />
+              </StyledCard>
+            ) : (
+              <Box>
+                <CardMedia
+                  component="img"
+                  image={AyaImg}
+                  alt="Background Image"
+                  sx={{
+                    height: "100%",
+                    width: { xs: "100%", md: "30vw" },
+                    objectFit: "cover",
+                    borderRadius: "15px",
+                    filter: "grayscale(100%)",
+                    transition: "filter 0.5s ease",
+                    "&:hover": {
+                      filter: "none",
+                    },
+                  }}
+                />
+              </Box>
+            )}
+          </Box>
         </Box>
         <Container
           sx={{
             alignItems: "center",
-            my: 15,
+            mt: 15,
           }}
         >
-          <Typography variant="h2">Hello World</Typography>
-          {/* <TypeWriterText /> */}
+          <TypeWriterText />
         </Container>
         <Box sx={{ py: 12 }}>
           <PhotoReel />
