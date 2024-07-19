@@ -117,7 +117,7 @@ const AboutMe = () => {
                 alt="Background Image"
                 sx={{
                   height: "500px",
-                  width: "100%",
+                  width: { xs: "100%", md: "50vw" },
                   objectFit: "cover",
                   borderRadius: "15px",
                   filter: "grayscale(100%)",
