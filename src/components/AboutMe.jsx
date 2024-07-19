@@ -9,7 +9,6 @@ import {
   styled,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-// import TestReel from "./TestReel";
 import PhotoReel from "./PhotoReel";
 import AyaImg from "../Photos/AboutMeImg.jpg";
 import EventImg from "../Photos/Gallery11.jpg";
@@ -54,7 +53,6 @@ const AboutMe = () => {
   const StyledCard = styled(Card)({
     position: "relative",
     zIndex: 2,
-    willChange: "transform",
     height: "500px",
     marginTop: "0",
     backgroundColor: "transparent",
@@ -93,6 +91,7 @@ const AboutMe = () => {
               component="img"
               image={AyaImg}
               alt="Background Image"
+              loading="lazy"
               sx={{
                 height: "500px",
                 width: "100%",
@@ -103,11 +102,13 @@ const AboutMe = () => {
                 "&:hover": {
                   filter: "none",
                 },
+                // Force hardware acceleration for smoother rendering
+                WebkitTransform: "translateZ(0)",
               }}
             />
           </StyledCard>
         </Box>
-        {/* <Container
+        <Container
           sx={{
             display: "flex",
             justifyContent: "center",
@@ -115,7 +116,7 @@ const AboutMe = () => {
           }}
         >
           <TypeWriterText />
-        </Container> */}
+        </Container>
         <Box sx={{ py: 12 }}>
           <PhotoReel />
         </Box>
@@ -174,6 +175,7 @@ const AboutMe = () => {
                 "&:hover": {
                   filter: "none",
                 },
+                WebkitTransform: "translateZ(0)",
               }}
               image={EventImg}
             />
