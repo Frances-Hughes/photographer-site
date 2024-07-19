@@ -50,7 +50,7 @@ const AboutMe = () => {
   const StyledCard = styled(Card)({
     position: "relative",
     zIndex: 2,
-    transition: "transform 0.1s ease-in-out",
+    // transition: "transform 0.1s ease-in-out",
     willChange: "transform",
     height: "420px",
     marginTop: "0",
@@ -112,9 +112,9 @@ const AboutMe = () => {
                 borderRadius: "15px",
                 filter: "grayscale(100%)",
                 transition: "filter 0.5s ease",
-                // "&:hover": {
-                //   filter: "none",
-                // },
+                "&:hover": {
+                  filter: "none",
+                },
               }}
             />
           </StyledCard>
