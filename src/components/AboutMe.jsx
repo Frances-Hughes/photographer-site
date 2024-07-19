@@ -86,10 +86,31 @@ const AboutMe = () => {
           >
             Masuda
           </Typography>
-          {!isAppleDevice && (
+          {!isAppleDevice ? (
             <StyledCard
               sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }}
             >
+              <CardMedia
+                component="img"
+                image={AyaImg}
+                alt="Background Image"
+                sx={{
+                  height: "500px",
+                  width: "100%",
+                  objectFit: "cover",
+                  borderRadius: "15px",
+                  filter: "grayscale(100%)",
+                  transition: "filter 0.5s ease",
+                  "&:hover": {
+                    filter: "none",
+                  },
+                  WebkitTransform: "translateZ(0)",
+                  backfaceVisibility: "hidden",
+                }}
+              />
+            </StyledCard>
+          ) : (
+            <StyledCard sx={{ my: "42px" }}>
               <CardMedia
                 component="img"
                 image={AyaImg}
@@ -115,7 +136,7 @@ const AboutMe = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            mt: 0,
+            mt: 5,
           }}
         >
           <TypeWriterText />
