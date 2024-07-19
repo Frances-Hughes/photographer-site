@@ -195,6 +195,7 @@ const Gallery = () => {
           label="Events/Entertainment"
           value="Events"
           sx={{
+            fontSize: { xs: "0.7rem", md: "1rem" },
             color: selectedTab === "Events" ? "white" : "inherit",
             fontWeight: selectedTab === "Events" ? "bold" : "normal",
           }}
@@ -203,6 +204,7 @@ const Gallery = () => {
           label="Sports"
           value="Sports"
           sx={{
+            fontSize: { xs: "0.6rem", md: "1rem" },
             color: selectedTab === "Sports" ? "white" : "inherit",
             fontWeight: selectedTab === "Sports" ? "bold" : "normal",
           }}
@@ -211,6 +213,7 @@ const Gallery = () => {
           label="Family"
           value="Family"
           sx={{
+            fontSize: { xs: "0.6rem", md: "1rem" },
             color: selectedTab === "Family" ? "white" : "inherit",
             fontWeight: selectedTab === "Family" ? "bold" : "normal",
           }}
