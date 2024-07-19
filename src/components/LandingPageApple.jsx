@@ -3,32 +3,6 @@ import { Box, Typography } from "@mui/material"; //createTheme
 import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
 import { motion } from "framer-motion";
 
-// const theme = createTheme({
-//   typography: {
-//     fontFamily: [
-//       "Yuji Syuku",
-//       "BlinkMacSystemFont",
-//       '"Segoe UI"',
-//       "Helvetica",
-//       "Arial",
-//       "sans-serif",
-//       '"Apple Color Emoji"',
-//       '"Segoe UI Emoji"',
-//     ].join(","),
-//     h1: {
-//       fontWeight: 900,
-//       fontSize: "42px",
-//       textTransform: "uppercase",
-//       textAlign: "center",
-//       color: "white", // Fallback color
-//       textFillColor: "transparent",
-//       WebkitTextFillColor: "transparent",
-//       backgroundClip: "text",
-//       WebkitBackgroundClip: "text",
-//     },
-//   },
-// });
-
 const variants = {
   hidden: { opacity: 0, x: 100 },
   visible: { opacity: 1, x: 0, transition: { duration: 1.5, delay: 0.2 } },
@@ -66,7 +40,7 @@ const LandingPageApple = () => {
           </Typography>
           <Box
             sx={{
-              height: "35vh",
+              height: "60vh",
               width: "100vw",
               backgroundImage: `url(${LandingImg})`,
               backgroundSize: "cover",
