@@ -98,8 +98,8 @@ const AboutMe = () => {
                 width: "100%",
                 // objectFit: "cover",
                 borderRadius: "15px",
-                filter: "grayscale(100%)",
-                transition: "filter 0.5s ease",
+                // filter: "grayscale(100%)",
+                // transition: "filter 0.5s ease",
                 "&:hover": {
                   filter: "none",
                 },
