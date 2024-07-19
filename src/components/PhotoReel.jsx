@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./PhotoReel.css";
 import Reel1 from "../Photos/Reel/Reel1.png";
 import Reel2 from "../Photos/Reel/Reel2.jpg";
-import Reel3 from "../Photos/Reel/Reel3.png";
+import Reel3 from "../Photos/Reel/Reel3.jpg";
 import Reel4 from "../Photos/Reel/Reel4.jpeg";
 import Reel5 from "../Photos/Reel/Reel5.jpg";
 import Reel6 from "../Photos/Reel/Reel6.jpg";

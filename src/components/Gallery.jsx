@@ -1,76 +1,78 @@
-import React from "react";
-import { Grid, Paper, Box, Typography, Skeleton } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Grid,
+  Paper,
+  Box,
+  Typography,
+  Skeleton,
+  Tabs,
+  Tab,
+} from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 // Importing images
-import Gallery1 from "../Photos/Gallery1.jpg";
-import Gallery2 from "../Photos/Gallery2.jpg";
-import Gallery3 from "../Photos/Gallery3.JPG";
-import Gallery4 from "../Photos/Gallery4.jpg";
-import Gallery5 from "../Photos/Gallery5.jpg";
-import Gallery6 from "../Photos/Gallery6.jpeg";
-import Gallery7 from "../Photos/Gallery7.jpg";
-import Gallery8 from "../Photos/Gallery8.jpg";
-import Gallery9 from "../Photos/Gallery9.png";
-import Gallery10 from "../Photos/Gallery10.png";
-import Gallery11 from "../Photos/Gallery11.jpg";
-import Gallery12 from "../Photos/Gallery12.jpg";
-// import Gallery13 from "../Photos/Gallery13.jpg";
-// import Gallery14 from "../Photos/Gallery14.jpg";
-// import Gallery15 from "../Photos/Gallery15.jpg";
-// import Gallery16 from "../Photos/Gallery16.jpg";
-// import Gallery17 from "../Photos/Gallery17.png";
-// import Gallery18 from "../Photos/Gallery18.jpg";
-// import Gallery19 from "../Photos/Gallery19.png";
-// import Gallery20 from "../Photos/Gallery20.jpg";
-// import Gallery21 from "../Photos/Gallery21.jpg";
-// import Gallery22 from "../Photos/Gallery22.jpg";
-// import Gallery23 from "../Photos/Gallery23.jpg";
-// import Gallery24 from "../Photos/Gallery24.png";
-// import Gallery25 from "../Photos/Gallery25.jpg";
-// import Gallery26 from "../Photos/Gallery26.jpg";
-// import Gallery27 from "../Photos/Gallery27.jpg";
-// import Gallery28 from "../Photos/Gallery28.jpg";
-// import Gallery29 from "../Photos/Gallery29.jpg";
-// import Gallery30 from "../Photos/Gallery30.jpg";
-// import Gallery31 from "../Photos/Gallery31.jpg";
-// import Gallery32 from "../Photos/Gallery32.jpg";
+import Sports1 from "../Photos/Sports1.jpg";
+import Sports2 from "../Photos/Sports2.jpg";
+import Sports3 from "../Photos/Sports3.jpg";
+import Sports4 from "../Photos/Sports4.jpg";
+import Sports5 from "../Photos/Sports5.jpg";
+import Sports6 from "../Photos/Sports6.jpg";
+import Sports7 from "../Photos/Sports7.jpg";
+import Sports8 from "../Photos/Sports8.jpg";
+
+import Family1 from "../Photos/Family1.JPG";
+import Family2 from "../Photos/Family2.jpg";
+import Family3 from "../Photos/Family3.jpg";
+import Family4 from "../Photos/Family4.JPG";
+import Family5 from "../Photos/Family5.jpg";
+import Family6 from "../Photos/Family6.jpg";
+
+import Events1 from "../Photos/Events1.jpg";
+import Events2 from "../Photos/Events2.jpg";
+import Events3 from "../Photos/Events3.jpg";
+import Events4 from "../Photos/Events4.jpg";
+import Events5 from "../Photos/Events5.jpg";
+import Events6 from "../Photos/Events6.jpg";
+import Events7 from "../Photos/Events7.jpg";
+import Events8 from "../Photos/Events8.jpg";
+import Events9 from "../Photos/Events9.jpg";
+import Events10 from "../Photos/Events10.JPG";
+import Events11 from "../Photos/Events11.jpg";
+import Events12 from "../Photos/Events12.jpg";
+import Events13 from "../Photos/Events13.jpg";
+import Events14 from "../Photos/Events14.jpg";
 
 const images = [
-  { id: 1, src: Gallery1 },
-  { id: 2, src: Gallery2 },
-  { id: 3, src: Gallery3 },
-  { id: 4, src: Gallery4 },
-  { id: 5, src: Gallery5 },
-  { id: 6, src: Gallery6 },
-  { id: 7, src: Gallery7 },
-  { id: 8, src: Gallery8 },
-  { id: 9, src: Gallery9 },
-  { id: 10, src: Gallery10 },
-  { id: 11, src: Gallery11 },
-  { id: 12, src: Gallery12 },
-  // { id: 13, src: Gallery13 },
-  // { id: 14, src: Gallery14 },
-  // { id: 15, src: Gallery15 },
-  // { id: 16, src: Gallery16 },
-  // { id: 17, src: Gallery17 },
-  // { id: 18, src: Gallery18 },
-  // { id: 19, src: Gallery19 },
-  // { id: 20, src: Gallery20 },
-  // { id: 21, src: Gallery21 },
-  // { id: 22, src: Gallery22 },
-  // { id: 23, src: Gallery23 },
-  // { id: 24, src: Gallery24 },
-  // { id: 25, src: Gallery25 },
-  // { id: 26, src: Gallery26 },
-  // { id: 27, src: Gallery27 },
-  // { id: 28, src: Gallery28 },
-  // { id: 29, src: Gallery29 },
-  // { id: 30, src: Gallery30 },
-  // { id: 31, src: Gallery31 },
-  // { id: 32, src: Gallery32 },
+  { id: 1, src: Sports1 },
+  { id: 2, src: Sports2 },
+  { id: 3, src: Sports3 },
+  { id: 4, src: Sports4 },
+  { id: 5, src: Sports5 },
+  { id: 6, src: Sports6 },
+  { id: 7, src: Sports7 },
+  { id: 8, src: Sports8 },
+  { id: 9, src: Family1 },
+  { id: 10, src: Family2 },
+  { id: 11, src: Family3 },
+  { id: 12, src: Family4 },
+  { id: 13, src: Family5 },
+  { id: 14, src: Family6 },
+  { id: 15, src: Events1 },
+  { id: 16, src: Events2 },
+  { id: 17, src: Events3 },
+  { id: 18, src: Events4 },
+  { id: 19, src: Events5 },
+  { id: 20, src: Events6 },
+  { id: 21, src: Events7 },
+  { id: 22, src: Events8 },
+  { id: 23, src: Events9 },
+  { id: 24, src: Events10 },
+  { id: 25, src: Events11 },
+  { id: 26, src: Events12 },
+  { id: 27, src: Events13 },
+  { id: 28, src: Events14 },
 ];
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
@@ -81,7 +83,9 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
   boxShadow: "none",
   "& img": {
     width: "100%",
+    maxHeight: "500px", // Use maxHeight instead of fixed height
     objectFit: "cover",
+    objectPosition: "center", // Center the image
     filter: "grayscale(100%)",
     transition: "filter 0.3s ease",
   },
@@ -149,7 +153,24 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
   },
 }));
 
+const filterImages = (category) => {
+  switch (category) {
+    case "Sports":
+      return images.filter((image) => image.src.includes("Sports"));
+    case "Family":
+      return images.filter((image) => image.src.includes("Family"));
+    default:
+      return images.filter((image) => image.src.includes("Events"));
+  }
+};
+
 const Gallery = () => {
+  const [selectedTab, setSelectedTab] = useState("Events");
+
+  const handleTabChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
   return (
     <Box sx={{ px: "5%", my: 12 }}>
       <Typography
@@ -158,8 +179,45 @@ const Gallery = () => {
       >
         Gallery
       </Typography>
+      <Tabs
+        sx={{ mt: 5, mb: 10 }}
+        value={selectedTab}
+        onChange={handleTabChange}
+        centered
+        textColor="inherit"
+        TabIndicatorProps={{
+          style: {
+            backgroundColor: "white",
+          },
+        }}
+      >
+        <Tab
+          label="Events/Entertainment"
+          value="Events"
+          sx={{
+            color: selectedTab === "Events" ? "white" : "inherit",
+            fontWeight: selectedTab === "Events" ? "bold" : "normal",
+          }}
+        />
+        <Tab
+          label="Sports"
+          value="Sports"
+          sx={{
+            color: selectedTab === "Sports" ? "white" : "inherit",
+            fontWeight: selectedTab === "Sports" ? "bold" : "normal",
+          }}
+        />
+        <Tab
+          label="Family"
+          value="Family"
+          sx={{
+            color: selectedTab === "Family" ? "white" : "inherit",
+            fontWeight: selectedTab === "Family" ? "bold" : "normal",
+          }}
+        />
+      </Tabs>
       <Grid container spacing={3} justifyContent="center">
-        {images.map((image) => (
+        {filterImages(selectedTab).map((image) => (
           <Grid item key={image.id} xs={12} sm={12} lg={6}>
             <ImagePaper>
               <LazyLoadImage
@@ -167,8 +225,14 @@ const Gallery = () => {
                 alt={`Gallery Image ${image.id}`}
                 effect="blur"
                 placeholder={
-                  <Skeleton variant="rectangular" width="100%" height={200} />
+                  <Skeleton
+                    variant="rectangular"
+                    width="100%"
+                    maxHeight={500}
+                  />
                 }
+                maxHeight={500}
+                width="100%"
                 wrapperClassName="image-wrapper"
               />
               <div className="border one">
