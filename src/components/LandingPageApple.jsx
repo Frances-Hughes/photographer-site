@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material"; //createTheme
+import { Box, Typography } from "@mui/material";
 import LandingImg from "../Photos/LandingImg/LandingPageImg.jpg";
 import { motion } from "framer-motion";
 
@@ -13,40 +13,94 @@ const LandingPageApple = () => {
     <Box>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          alignContent: "center",
-          my: 15,
+          height: "120vh",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        <Box>
-          <Typography
-            variant="h2"
-            component={motion.div} // Use motion.div as the root component
-            variants={variants} // Apply animation variants
-            initial="hidden" // Initial animation state
-            animate="visible" // Final animation state
-            sx={{
-              fontSize: { xs: "2rem", md: "4rem" },
-              display: "flex",
-              justifyContent: "center",
-              alignContent: "center",
-              textAlign: "center",
-              mt: 10,
-              mb: { xs: 10, md: 30 },
-            }}
-          >
-            AYANO MASUDA PHOTOGRAPHY
-          </Typography>
-          <Box
-            sx={{
-              height: "60vh",
-              width: "100vw",
-              backgroundImage: `url(${LandingImg})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
+        {/* First container */}
+        <Box
+          sx={{
+            clip: "rect(0, auto, auto, 0)",
+            overflow: "hidden",
+            position: "absolute",
+            top: 0,
+            height: "60vh",
+            left: 0,
+            width: "100%",
+            bgcolor: "primary",
+            maskImage: "linear-gradient(to bottom, #000 0%, #000 100%)",
+            "& .title_wrapper": {
+              position: "fixed",
+              top: "50%",
+              width: "100%",
+              transform: "translateY(-50%)",
+            },
+          }}
+        >
+          <Box className="title_wrapper">
+            <Typography
+              variant="h1"
+              sx={{
+                backgroundColor: "white",
+                filter: "grayscale(100%)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                paddingX: "4px",
+                fontWeight: "bold",
+              }}
+              component={motion.div}
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+            >
+              Ayano Masuda Photography
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* Second container */}
+        <Box
+          sx={{
+            clip: "rect(0, auto, auto, 0)",
+            overflow: "hidden",
+            position: "absolute",
+            top: "60vh",
+            height: "60vh",
+            left: 0,
+            width: "100%",
+            backgroundImage: `url(${LandingImg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            "& .title_wrapper": {
+              position: "fixed",
+              top: "50%",
+              width: "100%",
+              transform: "translateY(-50%)",
+              color: "white",
+            },
+          }}
+        >
+          <Box className="title_wrapper white">
+            <Typography
+              variant="h1"
+              sx={{
+                zIndex: 5,
+                bgcolor: "black",
+                opacity: 1,
+                animation: "fadeInRight 1.5s ease-out forwards",
+                animationDelay: "0.2s",
+                paddingX: "4px",
+              }}
+              component={motion.div}
+              variants={variants}
+              initial="hidden"
+              animate="visible"
+            >
+              Ayano Masuda Photography
+            </Typography>
+          </Box>
         </Box>
       </Box>
     </Box>
