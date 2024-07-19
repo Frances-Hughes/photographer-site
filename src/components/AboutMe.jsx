@@ -36,41 +36,29 @@ const theme = createTheme({
 });
 
 const AboutMe = () => {
-  const [offsetY, setOffsetY] = useState(0);
-
-  const handleScroll = () => {
-    setOffsetY(window.pageYOffset * 0.7);
-  };
+  const [offsetY, setOffsetY] = useState(window.pageYOffset * 0.7);
+  const [isAtTop, setIsAtTop] = useState(window.scrollY === 0);
 
   useEffect(() => {
+    const handleScroll = () => {
+      setOffsetY(window.pageYOffset * 0.7);
+      setIsAtTop(window.scrollY === 0);
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const StyledCard = styled(Card)({
     position: "relative",
     zIndex: 2,
-    // transition: "transform 0.1s ease-in-out",
     willChange: "transform",
     height: "500px",
     marginTop: "0",
     backgroundColor: "transparent",
   });
-
-  const [isAtTop, setIsAtTop] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrolledToTop = window.scrollY === 0;
-      setIsAtTop(scrolledToTop);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <ThemeProvider theme={theme}>
@@ -85,7 +73,7 @@ const AboutMe = () => {
           }}
         >
           <Typography
-            sx={{ zIndex: 3, position: "relative", my: 2 }} // Adjusted mt value
+            sx={{ zIndex: 3, position: "relative", my: 2 }}
             variant="h1"
             className={isAtTop ? "bouncy" : ""}
           >
@@ -99,7 +87,10 @@ const AboutMe = () => {
             Masuda
           </Typography>
           <StyledCard
-            sx={{ my: "42px", transform: `translateY(-${offsetY}px)` }} // Smooth scroll effect
+            sx={{
+              my: "42px",
+              transform: { xs: 0, md: `translateY(-${offsetY}px)` },
+            }}
           >
             <CardMedia
               component="img"
@@ -184,7 +175,7 @@ const AboutMe = () => {
                 filter: "grayscale(100%)",
                 transition: "filter 0.5s ease",
                 "&:hover": {
-                  filter: "none", // Remove filter on hover
+                  filter: "none",
                 },
               }}
               image={EventImg}
