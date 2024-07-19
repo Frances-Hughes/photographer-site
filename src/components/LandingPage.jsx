@@ -1,10 +1,16 @@
 import React from "react";
-import { Box, Typography, ThemeProvider, createTheme } from "@mui/material";
-// import { motion } from "framer-motion";
+import {
+  Box,
+  Typography,
+  ThemeProvider,
+  createTheme,
+  useMediaQuery,
+} from "@mui/material";
 import AnimatedDivider from "./AnimatedDivider";
 import Testimonials from "./Testimonials";
 import LandingPageNotApple from "./LandingPageNotApple";
 import LandingPageApple from "./LandingPageApple";
+import LandingPageAppleSmallScreen from "./LandingPageAppleSmallScreen";
 
 const theme = createTheme({
   typography: {
@@ -32,11 +38,6 @@ const theme = createTheme({
   },
 });
 
-// const variants = {
-//   hidden: { opacity: 0, x: 100 },
-//   visible: { opacity: 1, x: 0, transition: { duration: 1.5, delay: 0.2 } },
-// };
-
 const isAppleDevice = () => {
   return (
     /Mac|iPod|iPhone|iPad/.test(navigator.platform) ||
@@ -45,9 +46,20 @@ const isAppleDevice = () => {
 };
 
 const LandingPage = () => {
+  const isMediumOrLarger = useMediaQuery(theme.breakpoints.up("md"));
+  const isApple = isAppleDevice();
+
   return (
     <ThemeProvider theme={theme}>
-      {isAppleDevice() ? <LandingPageApple /> : <LandingPageNotApple />}
+      {isApple ? (
+        isMediumOrLarger ? (
+          <LandingPageApple />
+        ) : (
+          <LandingPageAppleSmallScreen />
+        )
+      ) : (
+        <LandingPageNotApple />
+      )}
 
       <Box
         sx={{
