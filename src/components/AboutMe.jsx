@@ -52,7 +52,7 @@ const AboutMe = () => {
     zIndex: 2,
     // transition: "transform 0.1s ease-in-out",
     willChange: "transform",
-    height: "420px",
+    height: "500px",
     marginTop: "0",
     backgroundColor: "transparent",
   });
@@ -106,7 +106,7 @@ const AboutMe = () => {
               image={AyaImg}
               alt="Background Image"
               sx={{
-                height: "420px",
+                height: "500px",
                 width: "100%",
                 objectFit: "cover",
                 borderRadius: "15px",
