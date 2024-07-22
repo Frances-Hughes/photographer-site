@@ -177,11 +177,11 @@ const AboutMe = () => {
               variant="body1"
               sx={{ fontSize: "1.2rem", textAlign: "justify", my: 3 }}
             >
-              I was born and raised in Japan. At 15, I took a leap of faith and
-              moved to New Zealand. I have come to love and call both paradises
-              my home. My journey with photography began with a humble Polaroid
-              gifted to me on my 7th birthday by my father, sparking a lifelong
-              passion for capturing moments frozen in time.
+              At the age of 15, I took a leap of faith and moved to New Zealand.
+              I have come to love and call both paradises my home. My journey
+              with photography began with a humble Polaroid gifted to me on my
+              7th birthday by my father, sparking a lifelong passion for
+              capturing moments frozen in time.
             </Typography>
             <Typography
               variant="body1"
@@ -201,7 +201,9 @@ const AboutMe = () => {
               Each click of the shutter is an opportunity to create lasting
               memories, to document the fleeting expressions and emotions that
               define our lives. I seek to capture the essence of each moment,
-              allowing it to live on through my photographs.
+              allowing it to live on through my photographs. Join me on this
+              visual journey, where every frame tells a story of connection,
+              emotion, and the timeless beauty of life.
             </Typography>
             <Typography
               variant="body1"
