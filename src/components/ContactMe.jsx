@@ -120,7 +120,7 @@ const ContactMe = () => {
             <Box sx={{ display: "flex", gap: 2 }}>
               <TextField
                 fullWidth
-                name="user_name" // Adjusted to match EmailJS template variables
+                name="user_name"
                 label="Your Name"
                 variant="outlined"
                 error={!!validationMessages.userName}
