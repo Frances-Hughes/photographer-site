@@ -7,9 +7,9 @@ const TypeWriterText = () => {
     <Box className="responsive-font" sx={{ color: "white", zIndex: 8 }}>
       <Box className="typewriter">
         {[
-          "I'm dedicated to ensuring",
-          "a complete and positive experience",
-          "for every client I serve",
+          "I capture moments",
+          "as a return ticket",
+          "to a memory otherwise gone",
         ].map((text, index) => (
           <Typography
             key={index}
