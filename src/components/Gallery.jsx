@@ -13,14 +13,20 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 // Importing images
-import Sports1 from "../Photos/Sports1.jpg";
-import Sports2 from "../Photos/Sports2.jpg";
-import Sports3 from "../Photos/Sports3.jpg";
-import Sports4 from "../Photos/Sports4.jpg";
-import Sports5 from "../Photos/Sports5.jpg";
-import Sports6 from "../Photos/Sports6.jpg";
-import Sports7 from "../Photos/Sports7.jpg";
-import Sports8 from "../Photos/Sports8.jpg";
+import commercial1 from "../Photos/commercial1.jpg";
+import commercial2 from "../Photos/commercial2.jpg";
+import commercial3 from "../Photos/commercial3.jpg";
+import commercial4 from "../Photos/commercial4.jpg";
+import commercial5 from "../Photos/commercial5.jpg";
+import commercial6 from "../Photos/commercial6.jpg";
+import commercial7 from "../Photos/commercial7.jpg";
+import commercial8 from "../Photos/commercial8.jpg";
+import commercial9 from "../Photos/commercial9.jpg";
+import commercial10 from "../Photos/commercial10.jpg";
+import commercial11 from "../Photos/commercial11.jpg";
+import commercial12 from "../Photos/commercial12.jpg";
+import commercial13 from "../Photos/commercial13.jpg";
+import commercial14 from "../Photos/commercial14.jpg";
 
 import Family1 from "../Photos/Family1.JPG";
 import Family2 from "../Photos/Family2.jpg";
@@ -45,34 +51,40 @@ import Events13 from "../Photos/Events13.jpg";
 import Events14 from "../Photos/Events14.jpg";
 
 const images = [
-  { id: 1, src: Sports1 },
-  { id: 2, src: Sports2 },
-  { id: 3, src: Sports3 },
-  { id: 4, src: Sports4 },
-  { id: 5, src: Sports5 },
-  { id: 6, src: Sports6 },
-  { id: 7, src: Sports7 },
-  { id: 8, src: Sports8 },
-  { id: 9, src: Family1 },
-  { id: 10, src: Family2 },
-  { id: 11, src: Family3 },
-  { id: 12, src: Family4 },
-  { id: 13, src: Family5 },
-  { id: 14, src: Family6 },
-  { id: 15, src: Events1 },
-  { id: 16, src: Events2 },
-  { id: 17, src: Events3 },
-  { id: 18, src: Events4 },
-  { id: 19, src: Events5 },
-  { id: 20, src: Events6 },
-  { id: 21, src: Events7 },
-  { id: 22, src: Events8 },
-  { id: 23, src: Events9 },
-  { id: 24, src: Events10 },
-  { id: 25, src: Events11 },
-  { id: 26, src: Events12 },
-  { id: 27, src: Events13 },
-  { id: 28, src: Events14 },
+  { id: 1, src: commercial1 },
+  { id: 2, src: commercial2 },
+  { id: 3, src: commercial3 },
+  { id: 4, src: commercial4 },
+  { id: 5, src: commercial5 },
+  { id: 6, src: commercial6 },
+  { id: 7, src: commercial7 },
+  { id: 8, src: commercial8 },
+  { id: 9, src: commercial9 },
+  { id: 10, src: commercial10 },
+  { id: 11, src: commercial11 },
+  { id: 12, src: commercial12 },
+  { id: 13, src: commercial13 },
+  { id: 14, src: commercial14 },
+  { id: 15, src: Family1 },
+  { id: 16, src: Family2 },
+  { id: 17, src: Family3 },
+  { id: 18, src: Family4 },
+  { id: 19, src: Family5 },
+  { id: 20, src: Family6 },
+  { id: 21, src: Events1 },
+  { id: 22, src: Events2 },
+  { id: 23, src: Events3 },
+  { id: 24, src: Events4 },
+  { id: 25, src: Events5 },
+  { id: 26, src: Events6 },
+  { id: 27, src: Events7 },
+  { id: 28, src: Events8 },
+  { id: 29, src: Events9 },
+  { id: 30, src: Events10 },
+  { id: 31, src: Events11 },
+  { id: 32, src: Events12 },
+  { id: 33, src: Events13 },
+  { id: 34, src: Events14 },
 ];
 
 const ImagePaper = styled(Paper)(({ theme }) => ({
@@ -155,8 +167,8 @@ const ImagePaper = styled(Paper)(({ theme }) => ({
 
 const filterImages = (category) => {
   switch (category) {
-    case "Sports":
-      return images.filter((image) => image.src.includes("Sports"));
+    case "commercial":
+      return images.filter((image) => image.src.includes("commercial"));
     case "Family":
       return images.filter((image) => image.src.includes("Family"));
     default:
@@ -201,12 +213,12 @@ const Gallery = () => {
           }}
         />
         <Tab
-          label="Sports"
-          value="Sports"
+          label="commercial"
+          value="commercial"
           sx={{
             fontSize: { xs: "0.5rem", md: "1rem" },
-            color: selectedTab === "Sports" ? "white" : "inherit",
-            fontWeight: selectedTab === "Sports" ? "bold" : "normal",
+            color: selectedTab === "commercial" ? "white" : "inherit",
+            fontWeight: selectedTab === "commercial" ? "bold" : "normal",
           }}
         />
         <Tab
